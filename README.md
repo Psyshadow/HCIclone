@@ -3,7 +3,7 @@
 </p>
 
 # EWOR - Education Platform Design, Group 9
-#### Jon Zehnder, Philipp Scherrer, Gina Buzziol
+#### Jon Zehnder, Philipp Scherrer, Gina Buzziol, Jana Bünder, Beat Scherrer
 
 ## Project description and customer needs
     TODO
