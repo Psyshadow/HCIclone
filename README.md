@@ -1,7 +1,3 @@
-<p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/HCI-fall-2018-project-page/blob/master/img/logo-ait.png">             
-</p>
-
 # EWOR - Education Platform Design, Group 9
 #### Jon Zehnder, Philipp Scherrer, Gina Buzziol, Jana Bünder, Beat Scherrer
 
@@ -14,7 +10,9 @@ Add a description of your project, based on your discussion with the stakeholder
 Include notes from your first meeting with the stakeholder and document your needfinding process (Week 2-3)
 
 ## Time Line
-
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/HCI-fall-2018-project-page/blob/master/img/timeline.JPG">             
+</p>
 ## Ideas
     TODO
 Start with the key requirements/needs of the users / the company
