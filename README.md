@@ -13,6 +13,8 @@ Add a description of your project, based on your discussion with the stakeholder
 
 Include notes from your first meeting with the stakeholder and document your needfinding process (Week 2-3)
 
+## Time Line
+
 ## Ideas
     TODO
 Start with the key requirements/needs of the users / the company
