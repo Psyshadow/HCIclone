@@ -13,6 +13,7 @@ Include notes from your first meeting with the stakeholder and document your nee
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/tree/master/img/timeline.JPG">             
 </p>
+
 ## Ideas
     TODO
 Start with the key requirements/needs of the users / the company
