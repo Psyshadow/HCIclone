@@ -18,12 +18,20 @@ The goal is to gain a deeper understanding of customer needs and translate them 
 </p>
 
 ## Ideas
-    TODO
 Start with the key requirements/needs of the users / the company
 Then list your initial ideas (min. 3) with a brief description.
 Upload the PPT presentation that you discussed with the stakeholder to the "deliverables" folder and include the link here. 
 
 Optional: in this part you can document ideation and prototyping process (e.g. describe personas, show affinity clusters, etc. ) (Weeks 3-6)
+
+### Affinity clustering
+During the exercise session from 03/10/2019, the information received during the stakeholder interview in the morning of the same day has been recapped. 
+The team members wrote down one term or a short phrase on sticky notes. 
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/timeline2.JPG?raw=true">             
+</p>
+By placing the sticky notes on the table the task has been divided into clusters and the problem has been reframed. The reframing of the problem leads to a guided solution search and a meaning of needfinding data is made.
+
     
 ## Evaluation
     TODO
