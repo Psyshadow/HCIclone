@@ -11,7 +11,7 @@ Include notes from your first meeting with the stakeholder and document your nee
 
 ## Time Line
 <p align="left" width="100%">
-[timeline](https://github.com/eth-ait/hci-project-group9/blob/master/img/timeline2.JPG)            
+![timeline](https://github.com/eth-ait/hci-project-group9/blob/master/img/timeline2.JPG)            
 </p>
 
 ## Ideas
