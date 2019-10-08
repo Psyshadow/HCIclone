@@ -11,7 +11,7 @@ Include notes from your first meeting with the stakeholder and document your nee
 
 ## Time Line
 <p align="left" width="100%">
-![timeline](/img/timeline2.JPG)            
+![timeline](/img/timeline2.jpg)            
 </p>
 
 ## Ideas
