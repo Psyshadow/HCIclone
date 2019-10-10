@@ -55,7 +55,8 @@ The complete list of possible feature and structure ideas can be found [here](ht
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/IMG_4782.jpg?raw=true">             
 </p>
 
-In the meantime, all team members are still conductiong interviews with startup founders from different industries to get a better understanding of the priorities and necessities at hand.
+In the meantime, all team members are still conducting interviews with startup founders from different industries to get a better understanding of the priorities and necessities at hand.
+Further tasks added include additional research into possible platforms, concept decisions and the preparation of concrete design ideas for a presentation to the shareholders.
     
 ## Evaluation
     TODO
