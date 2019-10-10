@@ -40,6 +40,8 @@ As a learning from the exercise session and the affinity clustering we took, tha
 - Module style/design
 - Platform Architecture 
 - Framework of EWOR
+
+This clustering was really helpful to further understand the projects goals and important framework.
 ## Evaluation
     TODO
 Describe your approach for evaluating your low-fi prototypes, present your results and your conclusion. 
