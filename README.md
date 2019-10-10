@@ -48,10 +48,11 @@ The goal of the exercise session on 10/10/2019 was to hold a brainstorming sessi
 - Onboarding Experience and Content Structure
 - Progress and Reward Tracking
 - Content Type (e.g. Videos vs Text, etc.)
+
 The complete list of possible feature and structure ideas can be found [here](https://docs.google.com/document/d/1_WuViY7FWu7IQ8LbECBP9XhBpRHZoaEtJjYyjS29tew/edit?usp=sharing) and in the image below.
 
 <p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/affinitycluster.jpeg?raw=true">             
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/IMG_4782.jpg?raw=true">             
 </p>
 
 In the meantime, all team members are still conductiong interviews with startup founders from different industries to get a better understanding of the priorities and necessities at hand.
