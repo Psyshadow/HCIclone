@@ -41,6 +41,20 @@ As a learning from the exercise session and the affinity clustering we took, tha
 - Framework of EWOR
 
 This clustering was helpful to further understand the projects goals and important framework.
+
+### Ideation Process
+The goal of the exercise session on 10/10/2019 was to hold a brainstorming session for collecting the ideas and various solution possibilities for the task at hand. These were then categorized into groups for all the subtasks, such as:
+- Platform Selection
+- Onboarding Experience and Content Structure
+- Progress and Reward Tracking
+- Content Type (e.g. Videos vs Text, etc.)
+The complete list of possible feature and structure ideas can be found [here](https://docs.google.com/document/d/1_WuViY7FWu7IQ8LbECBP9XhBpRHZoaEtJjYyjS29tew/edit?usp=sharing) and in the image below.
+
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/affinitycluster.jpeg?raw=true">             
+</p>
+
+In the meantime, all team members are still conductiong interviews with startup founders from different industries to get a better understanding of the priorities and necessities at hand.
     
 ## Evaluation
     TODO
