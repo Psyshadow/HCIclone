@@ -32,6 +32,15 @@ The team members wrote down one term or a short phrase on sticky notes.
 </p>
 By placing the sticky notes on the table the task has been divided into clusters and the problem has been reframed. The reframing of the problem leads to a guided solution search and a meaning of needfinding data is made.
 
+As a learning from the exercise session and the affinity clustering we took, that the project task can be clustered as followed:
+- Stakeholder vision 
+- Platform User
+- Content
+- Module style/design
+- Platform Architecture 
+- Framework of EWOR
+
+This clustering was helpful to further understand the projects goals and important framework.
     
 ## Evaluation
     TODO
