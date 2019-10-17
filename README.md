@@ -9,7 +9,7 @@
 - Companies can invest in startups at EWOR (call options)
 - They can also have an “innovation office” at EWOR ⇔ outsourcing risk
 
-## Education Platform - Motivation
+### Education Platform - Motivation
 The goal of EWOR is to offer an alternative way to "learn" entrepreneurship by "learning by doing" instead of studying it in theory.
 To provide their participants with the needed knowledge they want to create an education platform. This platform should be additional to the working experience and contain information about topics that the participants need in their training.
 
