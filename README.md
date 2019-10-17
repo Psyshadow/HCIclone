@@ -5,9 +5,14 @@
 ### Company Profile
 - Best summarized as “a networking company”
 - EWOR is an existing business that connects large corporations and entrepreneurs. It furthermore offers an own ecosystem that grants access to investors, founders, peers and most recently education. The education platform is not yet ready and expected to launch in 2020. It slightly changes EWOR’s target customer as described in the below material.
-- Employ people to help them find a company => Provide community, office space, Investor Network, “employment opportunity” if startup fails
+- Employ people to help them find a company => Provide community, office space, Investor Network, “employment opportunity” if startup fails.
 - Companies can invest in startups at EWOR (call options)
 - They can also have an “innovation office” at EWOR ⇔ outsourcing risk
+
+## Education Platform - Motivation
+The goal of EWOR is to offer an alternative way to "learn" entrepreneurship by "learning by doing" instead of studying it in theory.
+To provide their participants with the needed knowledge they want to create an education platform. This platform should be additional to the working experience and contain information about topics that the participants need in their training.
+
 ### Project Description
 The goal is to gain a deeper understanding of customer needs and translate them into a prototype that works within the restrictions of learndash.com used to build the education platform. The focus of this project is to understand customer needs and iterate different UI/UX to appeal to customers.
  
