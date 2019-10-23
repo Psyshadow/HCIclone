@@ -41,25 +41,49 @@ As a learning from the exercise session and the affinity clustering we took, tha
 - Framework of EWOR
 
 This clustering was really helpful to further understand the projects goals and important framework.
+
+### User Needs
+To gain an understanding of the user-needs all team members contacted start-ups. The start-up creators have been interview to gain knowledge on what they would have expected if they would have had access to such a learning plat form. 
+
+The user needs are extracted from the common needs of the interviews conducted with start ups and pose the requirements for our platform:
+
+General Needs:
+- Mentoring
+- Networking
+
+Missing knowledge:
+- Business creation (Legal, Employees, Insurances, business plan)
+- Basic knowledge (keywords)
+
+Platform Needs:
+- Browser (PC)
+- On Demand
+- Overview of current startup phase & progress
+- Content according to phase
+- Short videos
+- Questions to check knowledge
+
+
+### Idea Presentation
+As an outcome of the ideation process and the user-needs, possible features for the learning platform were presented to the stakeholders. This project differs a bit from the other ones in the sense that the stakeholders themselves are still figuring out how the learning platform should look like contentwise.
+The user-need identified in the start-up interview and the features presented were also helpful for the stakeholders to take further decisions.
+In the slides presented to the stakeholders (that can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Idea_Presentation_stakeholders.pptx)) the different possible ways to implement the features can be seen.
+
+(evtl. here example/image of the way a feature has been presented)
+
+By presenting them our insights and ideas, during the call, following new insights into the stakeholder's needs and their opinion about our ideas could be gained:
+
+- Mentor has login for the platform as well
+- Community should be present! Some kind of communication tool is wanted.
+- Interest check idea should be followed up on, the questionnaire was not welcomed.
+- Different types of progress should be visible (start-up phase user is in, knowledge in a specific field, etc.)
+- Content projection is still in progress at EWOR itself. The suggested introduction video with additional reading material was welcomed.
+
 ## Evaluation
     TODO
 Describe your approach for evaluating your low-fi prototypes, present your results and your conclusion. Upload the document shared with the stakeholder to the "deliverables" folder and include the link here.
 
 Optional: in this part you can also document the prototyping process: show different iterations, as well as failed ideas (Weeks 6-10)
-
-As an outcome of the ideation process and the start-up interviews we did, possible features for the learning platform were presented to the stakeholders. This project differs a bit from the other ones in the sense that the stakeholders themselves are still figuring out how the learning platform should look like contentwise.
-The user-need identified in the start-up interview and the features presented were also helpful for the stakeholders to take further decsions.
-In the slides presented to the stakholders (that can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Idea_Presentation_stakeholders.pptx)) the different possible ways to implement the features can be seen.
-
-(evtl. here example/image of the way a feature has been presented)
-
-By presenting them our insights and ideas, during the call, following new insights into the stakholder needs and their opinion about our ideas could be gained:
-
-- Mentor has login for the platform as well
-- Community should be present! Some kind of communication tool is wanted.
-- Interest check idea should be followed up on, questionnaire was not welcomed.
-- Different types of progess should be visible (start-up phase user is in, knowledge in a specific field, etc.)
-- Content projection is still in progress at EWOR itself. The suggested introduction video with additional reading material was welcomed.
 
 
 ## Final solution
