@@ -70,6 +70,13 @@ Upload the document shared with the stakeholder to the "deliverables" folder and
 
 Optional: in this part you can also document the prototyping process: show different iterations, as well as failed ideas (Weeks 6-10)
 
+After the ideation process and the start-up interviews we did, possible features for the learning platform were presented to the stakeholders. This project differs a bit from the other ones in the sense that the stakeholders themselves are still figuring out how the learning platform should look like contentwise. We could deliver some input to that as well, which they were really happy about. The slides we presented to the stakeholders can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Idea_Presentation_stakeholders.pptx). 
+The main decisions that have been made in the call are the following:
+- Mentor has login for the platform as well
+- Community should be present! Some kind of communication tool is wanted.
+- 
+- 
+
 ## Final solution
     TODO
 Describe your final solution to the problem and the prototype you developed in more detail here.
