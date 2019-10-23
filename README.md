@@ -74,8 +74,9 @@ After the ideation process and the start-up interviews we did, possible features
 The main decisions that have been made in the call are the following:
 - Mentor has login for the platform as well
 - Community should be present! Some kind of communication tool is wanted.
-- 
-- 
+- Interest check idea should be followed up on, questionnaire was not welcomed.
+- Different types of progess should be visible (start-up phase user is in, knowledge in a specific field, etc.)
+- Content projection is still in progress at EWOR itself. The suggested introduction video with additional reading material was welcomed.
 
 ## Final solution
     TODO
