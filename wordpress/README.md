@@ -13,7 +13,7 @@ cd && git clone git@github.com:eth-ait/hci-project-group9.git
 ```
 
 ## Installation
-To run wordpress it is easiest to use the XAMP(X-Platform Apache MySQL PHP) stack. Easiest way is to download [https://www.apachefriends.org/index.html](XAMPP).
+To run wordpress it is easiest to use the XAMP(X-Platform Apache MySQL PHP) stack. Easiest way is to download [XAMPP](https://www.apachefriends.org/index.html).
 
 ### Serve Wordpress
 Wordpress is served form a subfolder of the xampp installation (in linux it is `/opt/lampp/htdocs`. The wordpress folder with its plugins etc. is located in our github repo and can be symlinked to this location.
