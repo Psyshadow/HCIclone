@@ -22,3 +22,10 @@ Create symlink to wordpress folder:
 ```
 cd /opt/lampp/htdocs && ln -s ~/hci-project-group9/wordpress
 ```
+
+## Contribution
+Be aware of the git workflow:
+* main development branch is `develop`
+* To develop features use a new branch called `feature/<feature_name>`.
+* Merge features to develop
+* Merge develop to master only for complete prototype versions
