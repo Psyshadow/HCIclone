@@ -18,16 +18,16 @@
 
 /**  MySQL Einstellungen - diese Angaben bekommst du von deinem Webhoster. */
 /**  Ersetze database_name_here mit dem Namen der Datenbank, die du verwenden möchtest. */
-define( 'DB_NAME', 'wordpress' );
+define( 'DB_NAME', 'hci_2019' );
 
 /** Ersetze username_here mit deinem MySQL-Datenbank-Benutzernamen */
-define( 'DB_USER', 'admin' );
+define( 'DB_USER', 'administrator' );
 
 /** Ersetze password_here mit deinem MySQL-Passwort */
 define( 'DB_PASSWORD', '123456' );
 
 /** Ersetze localhost mit der MySQL-Serveradresse */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'sfk2019.ch' );
 
 /** Der Datenbankzeichensatz der beim Erstellen der Datenbanktabellen verwendet werden soll */
 define( 'DB_CHARSET', 'utf8mb4' );

@@ -61,4 +61,10 @@ Be aware of the git workflow:
 * Merge develop to master only for complete prototype versions
 
 ## Users
-* MySQL: user: admin, pw: 123456
+* MySQL:
+  * server: sfk2019.ch
+  * user: administrator 
+  * password: 123456
+
+## Further Links
+* [Learndash Bootcamp](http://localhost/wordpress/wp-admin/admin.php?page=learndash_lms_overview)
