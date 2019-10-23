@@ -29,7 +29,7 @@ The team members wrote down one term or a short phrase on sticky notes.
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/timeline2.JPG?raw=true">         
 </p>
-By placing the sticky notes on the table the task has been divided into clusters and the problem has been reframed. The reframing of the problem leads to a guided solution search and a meaning of needfinding data is made.
+By placing the sticky notes on the table the task has been divided into clusters and the problem has been reframed. The reframing of the problem leads to a guided solution search and a meaning of need-finding data is made.
 
 
 As a learning from the exercise session and the affinity clustering we took, that the project task can be clustered as followed:
@@ -40,10 +40,10 @@ As a learning from the exercise session and the affinity clustering we took, tha
 - Platform Architecture 
 - Framework of EWOR
 
-This clustering was really helpful to further understand the projects goals and important framework.
+This clustering was helpful to further understand the projects goals and important framework.
 
 ### User Needs
-To gain an understanding of the user-needs all team members contacted start-ups. The start-up creators have been interview to gain knowledge on what they would have expected if they would have had access to such a learning plat form. 
+To gain an understanding of the user-needs all team members contacted start-ups. The start-up creators have been interview to gain knowledge on what they would have expected if they would have had access to such a learning platform. 
 
 The user needs are extracted from the common needs of the interviews conducted with start ups and pose the requirements for our platform:
 
@@ -57,7 +57,7 @@ Missing knowledge:
 
 Platform Needs:
 - Browser (PC)
-- On Demand
+- On-Demand
 - Overview of current startup phase & progress
 - Content according to phase
 - Short videos
@@ -69,8 +69,8 @@ As an outcome of the ideation process and the user-needs, possible features for 
 The user-need identified in the start-up interview and the features presented were also helpful for the stakeholders to take further decisions.
 In the slides presented to the stakeholders (that can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Idea_Presentation_stakeholders.pptx)) the different possible ways to implement the features can be seen.
 
-On the following picture one example of the presented features can be seen.
-Out of the user-need, missing basic knowledge (key words) and content according to phase, we came up with the idea that somehow the current stage and interests of the platform-user can be  discovered and like this the user then receives suggestions to learn.
+On the following picture, one example of the presented features can be seen.
+Out of the user-need, missing basic knowledge (keywords) and content according to phase, we came up with the idea that somehow the current stage and interests of the platform-user can be discovered and like this, the user then receives suggestions to learn.
 
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
