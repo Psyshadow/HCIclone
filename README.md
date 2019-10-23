@@ -69,9 +69,14 @@ As an outcome of the ideation process and the user-needs, possible features for 
 The user-need identified in the start-up interview and the features presented were also helpful for the stakeholders to take further decisions.
 In the slides presented to the stakeholders (that can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Idea_Presentation_stakeholders.pptx)) the different possible ways to implement the features can be seen.
 
-(evtl. here example/image of the way a feature has been presented)
+On the following picture one example of the presented features can be seen.
+Out of the user-need, missing basic knowledge (key words) and content according to phase, we came up with the idea that somehow the current stage and interests of the platform-user can be  discovered and like this the user then receives suggestions to learn.
 
-By presenting them our insights and ideas, during the call, following new insights into the stakeholder's needs and their opinion about our ideas could be gained:
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
+</p>
+
+By presenting the stakeholders our insights and ideas, during the call, following new insights into the stakeholder's needs and their opinion about our ideas could be gained:
 
 - Mentor has login for the platform as well
 - Community should be present! Some kind of communication tool is wanted.
