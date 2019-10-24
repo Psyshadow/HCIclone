@@ -32,11 +32,10 @@ Optional: in this part you can document ideation and prototyping process (e.g. d
 During the exercise session from **03/10/2019**, the information received during the stakeholder interview in the morning of the same day has been recapped. 
 The team members wrote down one term or a short phrase on sticky notes. 
 <p align="left" width="100%">
-
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/timeline2.JPG?raw=true">         
+  <img style="width:30%;align:left" src="https://raw.githubusercontent.com/eth-ait/hci-project-group9/master/img/affinitycluster.jpeg?token=ANJ7NDMJAP43IZMF6YG5XDK5XMG6Y">         
 </p>
-By placing the sticky notes on the table the task has been divided into clusters and the problem has been reframed. The reframing of the problem leads to a guided solution search and a meaning of need-finding data is made.
 
+By placing the sticky notes on the table the task has been divided into clusters and the problem has been reframed. The reframing of the problem leads to a guided solution search and a meaning of need-finding data is made.
 
 As a learning from the exercise session and the affinity clustering we took, that the project task can be clustered as followed:
 - Stakeholder vision 
@@ -69,6 +68,21 @@ Platform Needs:
 - Short videos
 - Questions to check knowledge
 
+### Ideation Process
+The goal of the exercise session on 10/10/2019 was to hold a brainstorming session for collecting the ideas and various solution possibilities for the task at hand. These were then categorized into groups for all the subtasks, such as:
+- Platform Selection
+- Onboarding Experience and Content Structure
+- Progress and Reward Tracking
+- Content Type (e.g. Videos vs Text, etc.)
+
+The complete list of possible feature and structure ideas can be found [here](https://docs.google.com/document/d/1_WuViY7FWu7IQ8LbECBP9XhBpRHZoaEtJjYyjS29tew/edit?usp=sharing) and in the image below.
+
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/IMG_4782.jpg?raw=true">             
+</p>
+
+In the meantime, all team members are still conducting interviews with startup founders from different industries to get a better understanding of the priorities and necessities at hand.
+Further tasks added include additional research into possible platforms, concept decisions and the preparation of concrete design ideas for a presentation to the shareholders.
 
 ### Idea Presentation
 As an outcome of the ideation process and the user-needs, possible features for the learning platform were presented to the stakeholders. This project differs a bit from the other ones in the sense that the stakeholders themselves are still figuring out how the learning platform should look like contentwise.
@@ -100,22 +114,6 @@ As a learning from the exercise session and the affinity clustering we took, tha
 - Framework of EWOR
 
 This clustering was helpful to further understand the projects goals and important framework.
-
-### Ideation Process
-The goal of the exercise session on 10/10/2019 was to hold a brainstorming session for collecting the ideas and various solution possibilities for the task at hand. These were then categorized into groups for all the subtasks, such as:
-- Platform Selection
-- Onboarding Experience and Content Structure
-- Progress and Reward Tracking
-- Content Type (e.g. Videos vs Text, etc.)
-
-The complete list of possible feature and structure ideas can be found [here](https://docs.google.com/document/d/1_WuViY7FWu7IQ8LbECBP9XhBpRHZoaEtJjYyjS29tew/edit?usp=sharing) and in the image below.
-
-<p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/IMG_4782.jpg?raw=true">             
-</p>
-
-In the meantime, all team members are still conducting interviews with startup founders from different industries to get a better understanding of the priorities and necessities at hand.
-Further tasks added include additional research into possible platforms, concept decisions and the preparation of concrete design ideas for a presentation to the shareholders.
     
 
 ## Evaluation
