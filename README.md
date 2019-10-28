@@ -69,7 +69,7 @@ Platform Needs:
 - Questions to check knowledge
 
 ### Ideation Process
-The goal of the exercise session on **10/10/2019** was to hold a brainstorming session for collecting the ideas and various solution possibilities for the task at hand. These were then categorized into groups for all the subtasks, such as:
+The goal of the exercise session from **10/10/2019** was to hold a brainstorming session for collecting the ideas and various solution possibilities for the task at hand. These were then categorized into groups for all the subtasks, such as:
 - Platform Selection
 - Onboarding Experience and Content Structure
 - Progress and Reward Tracking
@@ -107,10 +107,12 @@ By presenting the stakeholders our insights and ideas, during the call, followin
    
 
 ## Evaluation
-    TODO
 Describe your approach for evaluating your low-fi prototypes, present your results and your conclusion. Upload the document shared with the stakeholder to the "deliverables" folder and include the link here.
 
 Optional: in this part you can also document the prototyping process: show different iterations, as well as failed ideas (Weeks 6-10)
+### Low-fi Prototypes
+The task of the exercise session **24/10/2019** was to do prototyping. Prototyping helps to narrow down and test ideas. In a first phase, we only did low-fi, paper prototypes since this helps to boost discussions and since the prototypes are only made out of paper it is more likely to throw an idea away and it is cost-and-time-effective. 
+Since the time in the exercise session was not enough the team decided that all team members continue doing paper prototypes at home, these prototypes will then be discussed during the team meeting of the **29/10/2019**.
 
 ## Final solution
     TODO
