@@ -1,12 +1,12 @@
 # EWOR - Education Platform Design, Group 9
 #### Jon Zehnder, Philipp Scherrer, Gina Buzziol, Jana Bünder, Beat Scherrer
 
-## Project description and customer needs
+## Project description and customer-needs
 ### Company Profile
 - Best summarized as “a networking company”
 - EWOR is an existing business that connects large corporations and entrepreneurs. It furthermore offers an own ecosystem that grants access to investors, founders, peers and most recently education. The education platform is not yet ready and expected to launch in 2020. It slightly changes EWOR’s target customer as described in the below material.
-- Employ people to help them find a company => Provide community, office space, Investor Network, “employment opportunity” if startup fails.
-- Companies can invest in startups at EWOR (call options)
+- Employ people to help them find a company => Provide community, office space, Investor Network, “employment opportunity” if start-up fails.
+- Companies can invest in start-ups at EWOR (call options)
 - They can also have an “innovation office” at EWOR ⇔ outsourcing risk
 
 ### Education Platform - Motivation
@@ -14,7 +14,7 @@ The goal of EWOR is to offer an alternative way to "learn" entrepreneurship by "
 To provide their participants with the needed knowledge they want to create an education platform. This platform should be additional to the working experience and contain information about topics that the participants need in their training.
 
 ### Project Description
-The goal is to gain a deeper understanding of customer needs and translate them into a prototype that works within the restrictions of learndash.com used to build the education platform. The focus of this project is to understand customer needs and iterate different UI/UX to appeal to customers.
+The goal is to gain a deeper understanding of customer-needs and translate them into a prototype that works within the restrictions of learndash.com used to build the education platform. The focus of this project is to understand customer-needs and iterate different UI/UX to appeal to customers.
  
 ## Time Line
 <p align="left" width="100%">
@@ -47,10 +47,10 @@ As a learning from the exercise session and the affinity clustering we took, tha
 
 This clustering was helpful to further understand the projects goals and important framework.
 
-### User Needs
+### User-Needs
 To gain an understanding of the user-needs all team members contacted start-ups. The start-up creators have been interview to gain knowledge on what they would have expected if they would have had access to such a learning platform. 
 
-The user needs are extracted from the common needs of the interviews conducted with start ups and pose the requirements for our platform:
+The user-needs are extracted from the common needs of the interviews conducted with start-ups and pose the requirements for our platform:
 
 General Needs:
 - Mentoring
@@ -63,13 +63,13 @@ Missing knowledge:
 Platform Needs:
 - Browser (PC)
 - On-Demand
-- Overview of current startup phase & progress
+- Overview of current start-up phase & progress
 - Content according to phase
 - Short videos
 - Questions to check knowledge
 
 ### Ideation Process
-The goal of the exercise session on 10/10/2019 was to hold a brainstorming session for collecting the ideas and various solution possibilities for the task at hand. These were then categorized into groups for all the subtasks, such as:
+The goal of the exercise session on **10/10/2019** was to hold a brainstorming session for collecting the ideas and various solution possibilities for the task at hand. These were then categorized into groups for all the subtasks, such as:
 - Platform Selection
 - Onboarding Experience and Content Structure
 - Progress and Reward Tracking
@@ -81,7 +81,7 @@ The complete list of possible feature and structure ideas can be found [here](ht
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/IMG_4782.jpg?raw=true">             
 </p>
 
-In the meantime, all team members are still conducting interviews with startup founders from different industries to get a better understanding of the priorities and necessities at hand.
+In the meantime, all team members are still conducting interviews with start-up founders from different industries to get a better understanding of the priorities and necessities at hand.
 Further tasks added include additional research into possible platforms, concept decisions and the preparation of concrete design ideas for a presentation to the shareholders.
 
 ### Idea Presentation
@@ -104,17 +104,7 @@ By presenting the stakeholders our insights and ideas, during the call, followin
 - Interest check idea should be followed up on, the questionnaire was not welcomed.
 - Different types of progress should be visible (start-up phase user is in, knowledge in a specific field, etc.)
 - Content projection is still in progress at EWOR itself. The suggested introduction video with additional reading material was welcomed.
-
-As a learning from the exercise session and the affinity clustering we took, that the project task can be clustered as followed:
-- Stakeholder vision 
-- Platform User
-- Content
-- Module style/design
-- Platform Architecture 
-- Framework of EWOR
-
-This clustering was helpful to further understand the projects goals and important framework.
-    
+   
 
 ## Evaluation
     TODO
