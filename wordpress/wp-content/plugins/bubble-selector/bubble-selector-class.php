@@ -1,70 +1,82 @@
 <?php
+
 /**
- * Adds a bubble selection widget.
+ * Adds BubbleSelectionWidget widget.
  */
 class BubbleSelectionWidget extends WP_Widget {
+
 	/**
-	 * Sets up the widgets name etc
+	 * Register widget with WordPress.
 	 */
-	public function __construct() {
-		$widget_ops = array( 
-			'classname' => 'BubbleSelectionWidget',
-			'description' => 'dummy description',
+	function __construct() {
+		parent::__construct(
+			'bubble_selection_widget', // Base ID
+			esc_html__( 'Bubble Selection', 'bs_domain' ), // Name
+			array( 'description' => esc_html__( 'Widget to make a selection from bubbles', 'bs_domain' ), ) // Args
 		);
-		parent::__construct( 'BubbleSelectionWidget', 'BubbleSelection', $widget_ops );
 	}
 
 	/**
-	 * Outputs the content of the widget
-	 * 
+	 * Front-end display of widget.
+	 *
 	 * @see WP_Widget::widget()
 	 *
-	 * @param array $args Widget arguments.
+	 * @param array $args     Widget arguments.
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args, $instance ) {
-		// outputs the content of the widget
-		echo test;
+		echo $args['before_widget']; 
+
+		if ( ! empty( $instance['title'] ) ) {
+			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
+		}
+
+		// widget content
+		echo 'Hello from bubble widget.';
+
+		echo $args['after_widget'];
 	}
 
 	/**
-	 * Outputs the options form on admin backend.
-	 * 
+	 * Back-end widget form.
+	 *
 	 * @see WP_Widget::form()
 	 *
-	 * @param array $instance Previously saved values fromd database.
+	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'text_domain' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Bubble Selection', 'bs_domain' );
 		?>
 		<p>
-		<label for="
-			<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>
-		">
-			<?php esc_attr_e( 'Title:', 'text_domain' ); ?>
-		</label> 
-		<input class="widefat" id="
-			<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>
-		" name="
-			<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>
-		" type="text" value="
-			<?php echo esc_attr( $title ); ?>
-		">
+		  <label 
+			  for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
+				<?php esc_attr_e( 'Title:', 'bs_domain' ); ?>
+			</label> 
+		  <input 
+			  class="widefat" 
+				id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" 
+				name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" 
+				type="text" 
+				value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<?php 
 	}
 
-
-
 	/**
-	 * Processing widget options on save
+	 * Sanitize widget form values as they are saved.
 	 *
-	 * @param array $new_instance The new options
-	 * @param array $old_instance The previous options
+	 * @see WP_Widget::update()
 	 *
-	 * @return array
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 *
+	 * @return array Updated safe values to be saved.
 	 */
 	public function update( $new_instance, $old_instance ) {
-		// processes widget options to be saved
+		$instance = array();
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
+
+		return $instance;
 	}
-}
+
+} // class Foo_Widget

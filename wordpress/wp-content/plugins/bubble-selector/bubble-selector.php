@@ -8,13 +8,17 @@
  * Author URI: 
  *
  */
-add_action( 'the_content', 'testFunction');
 
 if ( !defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+// Load class
+require_once(plugin_dir_path(__FILE__).'bubble-selector-class.php');
 
-function testFunction($content) {
-	return $content = $content . '<p> blablabl!</p>';
+function registerBubbleSelection(){
+	register_widget('BubbleSelectionWidget');
 }
+
+// Hook in function
+add_action('widgets_init', 'registerBubbleSelection');
