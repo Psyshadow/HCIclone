@@ -69,3 +69,7 @@ Be aware of the git workflow:
 ## Further Links
 * [Learndash Bootcamp](http://localhost/wordpress/wp-admin/admin.php?page=learndash_lms_overview)
 * [Chart.js](https://www.chartjs.org/docs/latest/)
+
+## Colors:
+orange: #fb7107
+grey: #1e2930
