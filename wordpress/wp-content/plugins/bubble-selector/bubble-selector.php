@@ -20,5 +20,17 @@ function registerBubbleSelection(){
 	register_widget('BubbleSelectionWidget');
 }
 
+function testFunction() {
+	$content = "<style>\r\n";
+	$content .= "h3.demoClass { \r\n";
+	$content .= "color: #26b158";
+	$content .= "}\r\n";
+	$content .= "</style>\r\n";
+	$content .= '<h3 class="demoClass"> Check it out!</h3>';
+
+	return $content;
+}
+
 // Hook in function
-add_action('widgets_init', 'registerBubbleSelection');
+// add_action('widgets_init', 'registerBubbleSelection');
+add_shortcode('bubble-selector', 'testFunction');
