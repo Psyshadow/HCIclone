@@ -69,3 +69,5 @@ Be aware of the git workflow:
 ## Further Links
 * [Learndash Bootcamp](http://localhost/wordpress/wp-admin/admin.php?page=learndash_lms_overview)
 * [Chart.js](https://www.chartjs.org/docs/latest/)
+* [User management](https://de.wordpress.org/plugins/wp-user-manager/)
+* [Wordpress Plugins](https://developer.wordpress.org/plugins/intro/what-is-a-plugin/)

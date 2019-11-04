@@ -5,6 +5,26 @@
  */
 class BubbleSelectionWidget extends WP_Widget {
 
+	/// Plugin name.
+	protected $m_plugin_name;
+
+	/// Plugin version.
+	protected $m_version;
+
+	/**
+	 * Getter for the plugin name.
+	 */
+	public function getPluginName() {
+		return $this->$m_plugin_name;
+	}
+
+	/**
+	 * Getter for the plugin version.
+	 */
+	public function getVersion() {
+		return $this->$m_version;
+	}
+
 	/**
 	 * Register widget with WordPress.
 	 */
@@ -12,8 +32,18 @@ class BubbleSelectionWidget extends WP_Widget {
 		parent::__construct(
 			'bubble_selection_widget', // Base ID
 			esc_html__( 'Bubble Selection', 'bs_domain' ), // Name
-			array( 'description' => esc_html__( 'Widget to make a selection from bubbles', 'bs_domain' ), ) // Args
+			array( 'description' => esc_html__( 'Widget to make a selection from bubbles.', 'bs_domain' ), ) // Args
 		);
+		$this->$m_plugin_name = "Bubble-Selection";
+		$this->definePublicHooks();
+		$this->defineAdminHooks();
+
+		if( defined('BUBBLE_SELECTOR_VERSION')) {
+			$this->m_version = BUBBLE_SELECTOR_VERSION;
+		} else {
+		  $this->$m_version = "0.0.1";
+		}
+
 	}
 
 	/**
@@ -28,15 +58,22 @@ class BubbleSelectionWidget extends WP_Widget {
 		echo $args['before_widget']; 
 
 		if ( ! empty( $instance['title'] ) ) {
-			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
+			echo $args['before_title'] . apply_filters( 'bubble_selection_widget', $instance['title'] ) . $args['after_title'];
 		}
 
 		// widget content
-		echo 'Hello from bubble widget.';
+		echo '<h3> Hello from bubble widget. </h3>';
 
 		echo $args['after_widget'];
 	}
 
+	private function definePublicHooks() {
+
+	}
+
+	private function defineAdminHooks() {}
+
+	public function run() {}
 	/**
 	 * Back-end widget form.
 	 *
@@ -58,6 +95,15 @@ class BubbleSelectionWidget extends WP_Widget {
 				name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" 
 				type="text" 
 				value="<?php echo esc_attr( $title ); ?>">
+			<label for="<?php echo esc_attr( $this->get_field_id(' test ') ); ?>">
+			  <?php esc_attr_e( 'Test:', 'bs_domain' ); ?>
+			</label>
+			<input 
+			  class="widefat"
+				id="<?php echo esc_attr( $this->get_field_id( 'test' ) ); ?>"
+				name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
+				type="text"
+				value="<?php echo esc_attr( $test ); ?>">
 		</p>
 		<?php 
 	}
