@@ -1,15 +1,43 @@
 <?php
 
+require_once(plugin_dir_path(__FILE__).'db.php');
+
 /**
  * Adds BubbleSelectionWidget widget.
  */
-class BubbleSelectionWidget extends WP_Widget {
+class BubbleSelector extends WP_Widget {
 
 	/// Plugin name.
 	protected $m_plugin_name;
 
 	/// Plugin version.
 	protected $m_version;
+
+	/// Learndash categories.
+	public $m_categories;
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			'bubble_selection_widget', // Base ID
+			esc_html__( 'Bubble Selection', 'bs_domain' ), // Name
+			array( 'description' => esc_html__( 'Widget to make a selection from bubbles.', 'bs_domain' ), ) // Args
+		);
+		$this->$m_plugin_name = "Bubble-Selection";
+		$this->m_version = BUBBLE_SELECTOR_VERSION;
+		
+		// fetch categories from DB
+		$this->m_categories = getFromDB("SELECT * FROM 'wp_terms'");
+
+
+		$this->definePublicHooks();
+		$this->defineAdminHooks();
+		
+		// Register Shortcode
+		add_shortcode('bubble-selector', array($this, 'shortCodeFunction'));
+	}
 
 	/**
 	 * Getter for the plugin name.
@@ -26,54 +54,23 @@ class BubbleSelectionWidget extends WP_Widget {
 	}
 
 	/**
-	 * Register widget with WordPress.
+	 * Getter for the categories.
 	 */
-	function __construct() {
-		parent::__construct(
-			'bubble_selection_widget', // Base ID
-			esc_html__( 'Bubble Selection', 'bs_domain' ), // Name
-			array( 'description' => esc_html__( 'Widget to make a selection from bubbles.', 'bs_domain' ), ) // Args
-		);
-		$this->$m_plugin_name = "Bubble-Selection";
-		$this->definePublicHooks();
-		$this->defineAdminHooks();
-
-		if( defined('BUBBLE_SELECTOR_VERSION')) {
-			$this->m_version = BUBBLE_SELECTOR_VERSION;
-		} else {
-		  $this->$m_version = "0.0.1";
-		}
-
+	public function getCategories() {
+		return $this->$m_categories;
 	}
 
-	/**
-	 * Front-end display of widget.
-	 *
-	 * @see WP_Widget::widget()
-	 *
-	 * @param array $args     Widget arguments.
-	 * @param array $instance Saved values from database.
-	 */
-	public function widget( $args, $instance ) {
-		echo $args['before_widget']; 
 
-		if ( ! empty( $instance['title'] ) ) {
-			echo $args['before_title'] . apply_filters( 'bubble_selection_widget', $instance['title'] ) . $args['after_title'];
-		}
-
-		// widget content
-		echo '<h3> Hello from bubble widget. </h3>';
-
-		echo $args['after_widget'];
-	}
-
+	// TODO hook in stuff...
 	private function definePublicHooks() {
 
 	}
 
+	// TODO hook in stuff...
 	private function defineAdminHooks() {}
 
 	public function run() {}
+
 	/**
 	 * Back-end widget form.
 	 *
@@ -123,6 +120,28 @@ class BubbleSelectionWidget extends WP_Widget {
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
 
 		return $instance;
+	}
+
+	/**
+	 * Shortcode function. 
+	 * Needs to be static for wordpress handler.
+	 * 
+	 * @return The shortcode html and js entry point.
+	 */
+	public static function shortCodeFunction() {
+		$content = "<style>\r\n";
+		$content .= "h3.demoClass { \r\n";
+		$content .= "color: #26b158";
+		$content .= "}\r\n";
+		$content .= "</style>\r\n";
+		$content .= '<h3 class="demoClass" id="demoId"> Check it out!</h3>';
+		$content .= '<button id="demoButton">demobutton</button>';
+		$content .= '<div id="bubbleGraph"></div>';
+		return $content;
+	}
+
+	public function test() {
+		echo "test inside class";
 	}
 
 } // class Foo_Widget

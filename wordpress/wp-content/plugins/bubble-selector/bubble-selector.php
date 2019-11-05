@@ -3,10 +3,8 @@
  * Plugin Name: Bubble Selector
  * Description: 
  * Plugin URI: 
- * Author:
+ * Author: Beat Scherrer
  * Version: 0.0.1
- * Author URI: 
- *
  */
 
 // Housekeeping
@@ -16,10 +14,11 @@ if ( !defined( 'ABSPATH' ) ) {
 
 define( 'BUBBLE_SELECTOR_VERSION', '0.0.1' );
 
-
 // Load class
-require_once(plugin_dir_path(__FILE__).'bubble-selector-class.php');
+require_once(plugin_dir_path(__FILE__).'/includes/php/bubble-selector-class.php');
+$bubble_selector = new BubbleSelector();
 
+// TODO add hooks inside class
 // ------------------
 // Hook in javascript
 // ------------------
@@ -31,26 +30,10 @@ function enqueueScript(){
 }
 enqueueScript();
 
-$categories = array('a', 'b', 'c');
+// get the course categories and hand them over to the javascript.
+$categories = $bubble_selector->getVersion();
+
+$bubble_selector->getCategories();
 
 // add variables from php to js
 wp_localize_script('test', 'php_vars', $categories);
-
-// ---------------
-// Shortcode Stuff
-// ---------------
-function testFunction() {
-	$content = "<style>\r\n";
-	$content .= "h3.demoClass { \r\n";
-	$content .= "color: #26b158";
-	$content .= "}\r\n";
-	$content .= "</style>\r\n";
-	$content .= '<h3 class="demoClass" id="demoId"> Check it out!</h3>';
-	$content .= '<button id="demoButton">demobutton</button>';
-	$content .= '<div id="bubbleGraph"></div>';
-	return $content;
-}
-
-// Hook in function
-// add_action('widgets_init', 'registerBubbleSelection');
-add_shortcode('bubble-selector', 'testFunction');
