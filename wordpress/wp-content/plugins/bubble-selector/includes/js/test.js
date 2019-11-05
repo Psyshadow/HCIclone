@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', init, false);
 alert("test");
 
 function demoFunction() {
+  console.log(php_vars);
   alert("demo");
 }
 

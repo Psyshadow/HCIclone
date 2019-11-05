@@ -20,11 +20,6 @@ define( 'BUBBLE_SELECTOR_VERSION', '0.0.1' );
 // Load class
 require_once(plugin_dir_path(__FILE__).'bubble-selector-class.php');
 
-function registerBubbleSelection(){
-	register_widget('BubbleSelectionWidget');
-}
-
-
 // ------------------
 // Hook in javascript
 // ------------------
@@ -35,6 +30,11 @@ function enqueueScript(){
 	wp_enqueue_script('test', plugin_dir_url(__FILE__).'includes/js/test.js', array('d3js'));
 }
 enqueueScript();
+
+$categories = array('a', 'b', 'c');
+
+// add variables from php to js
+wp_localize_script('test', 'php_vars', $categories);
 
 // ---------------
 // Shortcode Stuff
