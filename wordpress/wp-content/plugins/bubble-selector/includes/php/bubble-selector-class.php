@@ -2,8 +2,11 @@
 
 require_once(plugin_dir_path(__FILE__).'db.php');
 
+// Make sure no other class named BubbleSelector exists to avoid fatal erros.
+if(!class_exists('BubbleSelector')) {
+
 /**
- * Adds BubbleSelectionWidget widget.
+ * Bubble selector class definition.
  */
 class BubbleSelector extends WP_Widget {
 
@@ -144,4 +147,6 @@ class BubbleSelector extends WP_Widget {
 		echo "test inside class";
 	}
 
-} // class Foo_Widget
+} // class BubbleSelector
+
+} // class guard
