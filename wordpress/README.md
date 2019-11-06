@@ -72,3 +72,4 @@ Be aware of the git workflow:
 * [ForceSimulation graph](https://bl.ocks.org/HarryStevens/f636199a46fc4b210fbca3b1dc4ef372)
 * [User management](https://de.wordpress.org/plugins/wp-user-manager/)
 * [Wordpress Plugins](https://developer.wordpress.org/plugins/intro/what-is-a-plugin/)
+* [Wordpress Plugin Boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate)
