@@ -32,6 +32,9 @@ class BubbleSelector {
 
 		$this->definePublicHooks();
 		$this->defineAdminHooks();
+
+		// Enqueue scripts
+		$this->enqueueScripts();
 		
 		// Register Shortcode
 		add_shortcode('bubble-selector', array($this, 'shortCodeFunction'));
@@ -140,6 +143,20 @@ class BubbleSelector {
 
 	public function test() {
 		echo "test inside class";
+	}
+
+	/**
+	 * Enqueue scripts.
+	 */
+	private function enqueueScripts() {
+		wp_register_script('d3js', 'https://d3js.org/d3.v4.min.js', null, null, true);
+		wp_enqueue_script('test', plugin_dir_url(__FILE__).'../js/test.js', array('d3js'));
+
+		// get the course categories and hand them over to the javascript.
+		$categories = array("a", "b", "c");
+
+		// add variables from php to js
+		wp_localize_script('test', 'php_vars', $categories);
 	}
 
 } // class BubbleSelector
