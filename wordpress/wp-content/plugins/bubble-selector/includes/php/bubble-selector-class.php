@@ -8,7 +8,7 @@ if(!class_exists('BubbleSelector')) {
 /**
  * Bubble selector class definition.
  */
-class BubbleSelector extends WP_Widget {
+class BubbleSelector {
 
 	/// Plugin name.
 	protected $m_plugin_name;
@@ -23,11 +23,6 @@ class BubbleSelector extends WP_Widget {
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
-		parent::__construct(
-			'bubble_selection_widget', // Base ID
-			esc_html__( 'Bubble Selection', 'bs_domain' ), // Name
-			array( 'description' => esc_html__( 'Widget to make a selection from bubbles.', 'bs_domain' ), ) // Args
-		);
 		$this->$m_plugin_name = "Bubble-Selection";
 		$this->m_version = BUBBLE_SELECTOR_VERSION;
 		
