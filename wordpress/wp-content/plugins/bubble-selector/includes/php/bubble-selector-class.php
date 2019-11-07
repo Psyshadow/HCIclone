@@ -33,11 +33,11 @@ class BubbleSelector {
 		$this->definePublicHooks();
 		$this->defineAdminHooks();
 
-		// Enqueue scripts
-		$this->enqueueScripts();
-		
 		// Register Shortcode
 		add_shortcode('bubble-selector', array($this, 'shortCodeFunction'));
+
+		// Enqueue scripts
+		add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
 	}
 
 	/**
@@ -148,7 +148,8 @@ class BubbleSelector {
 	/**
 	 * Enqueue scripts.
 	 */
-	private function enqueueScripts() {
+	public function enqueueScripts() {
+		// Javscript
 		wp_register_script('d3js', 'https://d3js.org/d3.v4.min.js', null, null, true);
 		wp_enqueue_script('test', plugin_dir_url(__FILE__).'../js/test.js', array('d3js'));
 
@@ -156,7 +157,13 @@ class BubbleSelector {
 		$categories = array("a", "b", "c");
 
 		// add variables from php to js
-		wp_localize_script('test', 'php_vars', $categories);
+		wp_localize_script('test', 'php_vars', array(
+			'pluginsUrl' => plugins_url()
+			));
+
+
+		// CSS
+		wp_register_style('my_style', plugin_dir_url(__FILE__).'../css/test_style.css');
 	}
 
 } // class BubbleSelector
