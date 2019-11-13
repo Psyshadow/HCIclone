@@ -3,14 +3,15 @@ init();
 // console.log(php_vars.pluginsUrl);
 
 function init() {
-  var width = window.innerWidth, height = window.innerHeight, sizeDivisor = 100, nodePadding = 2.5;
+  var width = window.innerWidth, 
+      height = window.innerHeight,
+      sizeDivisor = 100, // Divides the gdp by 100 to get the size
+      nodePadding = 2.5;
 
   var svg = d3.select("#bubbleGraph")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
-
-  var color = d3.scaleOrdinal(["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854", "#ffd92f", "#e5c494", "#b3b3b3"]);
 
   var simulation = d3.forceSimulation()
     .force("forceX", d3.forceX().strength(.1).x(width * .5))
@@ -40,13 +41,14 @@ function init() {
       .data(graph)
       .enter().append("circle")
       .attr("r", function (d) { return d.radius; })
-      .attr("fill", function (d) { return color(d.continent); })
+      .attr("fill", function (d) { return "#1e2931"; })
       .attr("cx", function (d) { return d.x; })
       .attr("cy", function (d) { return d.y; })
       .call(d3.drag()
         .on("start", dragstarted)
         .on("drag", dragged)
-        .on("end", dragended));
+        .on("end", dragended))
+        .on("click", onClick);
 
   });
 
@@ -73,5 +75,19 @@ function init() {
     d.size < 3 ? d.radius = 3 : d.radius = d.size;
     return d;
   }
+
+  function onClick(d) {
+    console.log(d);
+
+    if(d.selected === null) {
+      d.selected = true;
+    }
+    d.selected != d.selected;
+    d3.select(this).select("circle")
+      .attr("fill", function(d) {
+        console.log(d);
+      });
+  }
+
 
 }
