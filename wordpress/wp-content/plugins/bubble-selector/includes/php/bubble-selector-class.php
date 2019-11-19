@@ -141,29 +141,41 @@ class BubbleSelector {
 		return $content;
 	}
 
-	public function test() {
-		echo "test inside class";
-	}
-
 	/**
 	 * Enqueue scripts.
 	 */
 	public function enqueueScripts() {
+		//
 		// Javscript
+		//
 		wp_register_script('d3js', 'https://d3js.org/d3.v4.min.js', null, null, true);
-		wp_enqueue_script('test', plugin_dir_url(__FILE__).'../js/test.js', array('d3js'));
-
-		// get the course categories and hand them over to the javascript.
-		$categories = array("a", "b", "c");
+		// JQuery is already registered as a default
+		wp_enqueue_script('test', plugin_dir_url(__FILE__).'../js/test.js', array('d3js', 'jquery'));
 
 		// add variables from php to js
 		wp_localize_script('test', 'php_vars', array(
-			'pluginsUrl' => plugins_url()
+			'test_value' => 4,
+			'ajax_url' => admin_url('admin-ajax.php')
 			));
+		
+		// Set callback for ajax request
+		add_action('wp_ajax_selection_callback', 'selection_callback');
 
-
+		//
 		// CSS
+		//
 		wp_register_style('my_style', plugin_dir_url(__FILE__).'../css/test_style.css');
+	}
+
+	/**
+	 * Ajax callback handler. 
+	 * Writes the selected topics to the database.
+	 */
+	public function selection_callback() {
+		// Create db handle
+		global $wpdb;
+
+		echo $_POST.test;
 	}
 
 } // class BubbleSelector

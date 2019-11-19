@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', init, false);
-init();
-// console.log(php_vars.pluginsUrl);
+console.log(php_vars);
 
-// TODO add available topics from db
-// TODO get interested topics from db
-// TODO write interested topics to db
+// TODO add available topics from db (ajax)
+// TODO get interested topics from db (ajax)
+// TODO write interested topics to db (ajax)
 
-// Orange: #fb7107
+const g_orange = "#fb7107";
+const g_blue = "#1e2931";
 
 function init() {
   var width = window.innerWidth,
@@ -29,15 +29,12 @@ function init() {
   d3.csv("/wordpress/wp-content/plugins/bubble-selector/includes/js/data.csv", types, function (error, graph) {
     if (error) throw error;
 
-
     // sort the nodes so that the bigger ones are at the back
     graph = graph.sort(function (a, b) { return b.size - a.size; });
     // add selected field to each node
-    graph.forEach(element => {
-      element.selected = false;
+    graph.forEach(d => {
+      d.selected = false;
     });
-
-    console.log(graph);
 
     //update the simulation based on the data
     simulation
@@ -55,7 +52,7 @@ function init() {
       .data(graph)
       .enter().append("circle")
       .attr("r", function (d) { return d.radius; })
-      .attr("fill", function () { return "#1e2931"; })
+      .attr("fill", function () { return g_blue; })
       .attr("cx", function (d) { return d.x; })
       .attr("cy", function (d) { return d.y; })
       .call(d3.drag()
@@ -92,23 +89,51 @@ function init() {
   }
 
   function onClick(d) {
-
+    // change selected state
     d.selected = !d.selected;
 
+    // Set color
     if (d.selected) {
-      console.log("is selected");
-      // change color
       d3.select(this)
         .attr("fill", function (d) {
-          console.log("test");
-          return "#fb7107";
+          return g_orange;
         });
     } else {
       d3.select(this)
         .attr("fill", function(d) {
-          return "#1e2931";
+          return g_blue;
         })
     }
   }
+
+  // Ajax function to write the selection to the DB
+  function ajaxSubmit(){
+    console.log("issue ajax request...\n ");
+
+    jQuery.ajax({
+      type:'POST',
+      dataType: 'html',
+      url: php_vars.ajax_url, // url is passed from plugin
+      data: {
+        action: 'selection_callback', // set callback name
+        test: 1
+      },
+      success: function() {
+        console.log("...success!");
+        alert("Ajax request successful!");
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        // console.log("...failed: " + errorThrown + "!");
+        console.log(JSON.stringify(jqXHR) + ' :: ' + textStatus + ' :: ' + errorThrown);
+        alert("Ajax request failed...");
+      }
+    });
+  }
+
+  document.getElementById("demoButton").addEventListener("click", ajaxSubmit);
+
+  // Add ajax request to demobutton
+  // document.getElementById("demoButton").addEventListener("click",
+  //   ajaxSubmit);
 
 }
