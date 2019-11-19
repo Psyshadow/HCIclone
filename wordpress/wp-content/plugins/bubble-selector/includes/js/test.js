@@ -2,11 +2,17 @@ document.addEventListener('DOMContentLoaded', init, false);
 init();
 // console.log(php_vars.pluginsUrl);
 
+// TODO add available topics from db
+// TODO get interested topics from db
+// TODO write interested topics to db
+
+// Orange: #fb7107
+
 function init() {
-  var width = window.innerWidth, 
-      height = window.innerHeight,
-      sizeDivisor = 100, // Divides the gdp by 100 to get the size
-      nodePadding = 2.5;
+  var width = window.innerWidth,
+    height = window.innerHeight,
+    sizeDivisor = 100, // Divides the gdp by 100 to get the size
+    nodePadding = 2.5;
 
   var svg = d3.select("#bubbleGraph")
     .append("svg")
@@ -19,11 +25,19 @@ function init() {
     .force("center", d3.forceCenter().x(width * .5).y(height * .5))
     .force("charge", d3.forceManyBody().strength(-15));
 
+  // TODO replace with data from wpdb (pass from plugin)
   d3.csv("/wordpress/wp-content/plugins/bubble-selector/includes/js/data.csv", types, function (error, graph) {
     if (error) throw error;
 
+
     // sort the nodes so that the bigger ones are at the back
     graph = graph.sort(function (a, b) { return b.size - a.size; });
+    // add selected field to each node
+    graph.forEach(element => {
+      element.selected = false;
+    });
+
+    console.log(graph);
 
     //update the simulation based on the data
     simulation
@@ -41,14 +55,15 @@ function init() {
       .data(graph)
       .enter().append("circle")
       .attr("r", function (d) { return d.radius; })
-      .attr("fill", function (d) { return "#1e2931"; })
+      .attr("fill", function () { return "#1e2931"; })
       .attr("cx", function (d) { return d.x; })
       .attr("cy", function (d) { return d.y; })
       .call(d3.drag()
         .on("start", dragstarted)
         .on("drag", dragged)
         .on("end", dragended))
-        .on("click", onClick);
+      .on("click", onClick)
+
 
   });
 
@@ -77,17 +92,23 @@ function init() {
   }
 
   function onClick(d) {
-    console.log(d);
 
-    if(d.selected === null) {
-      d.selected = true;
+    d.selected = !d.selected;
+
+    if (d.selected) {
+      console.log("is selected");
+      // change color
+      d3.select(this)
+        .attr("fill", function (d) {
+          console.log("test");
+          return "#fb7107";
+        });
+    } else {
+      d3.select(this)
+        .attr("fill", function(d) {
+          return "#1e2931";
+        })
     }
-    d.selected != d.selected;
-    d3.select(this).select("circle")
-      .attr("fill", function(d) {
-        console.log(d);
-      });
   }
-
 
 }
