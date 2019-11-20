@@ -4,6 +4,7 @@ console.log(php_vars);
 // TODO add available topics from db (ajax)
 // TODO get interested topics from db (ajax)
 // TODO write interested topics to db (ajax)
+// TODO write add text labels to each circle
 
 const g_orange = "#fb7107";
 const g_blue = "#1e2931";
@@ -107,7 +108,7 @@ function init() {
   }
 
   // Ajax function to write the selection to the DB
-  function ajaxSubmit(){
+  function postSelection(){
     console.log("issue ajax request...\n ");
 
     jQuery.ajax({
@@ -115,12 +116,11 @@ function init() {
       dataType: 'html',
       url: php_vars.ajax_url, // url is passed from plugin
       data: {
-        action: 'selection_callback', // set callback name
+        action: 'post_selection', // set callback name (->wp_ajax_<action_name>)
         test: 1
       },
-      success: function() {
-        console.log("...success!");
-        alert("Ajax request successful!");
+      success: function(response) {
+        alert(response);
       },
       error: function(jqXHR, textStatus, errorThrown) {
         // console.log("...failed: " + errorThrown + "!");
@@ -130,10 +130,45 @@ function init() {
     });
   }
 
-  document.getElementById("demoButton").addEventListener("click", ajaxSubmit);
+  function getSelection() {
+    console.log("ajax: getSelection");
 
-  // Add ajax request to demobutton
-  // document.getElementById("demoButton").addEventListener("click",
-  //   ajaxSubmit);
+    jQuery.ajax({
+      type: 'GET',
+      dataType: 'html',
+      url: php_vars.ajax_url,
+      data: {
+        action: 'get_selection'
+      },
+      success: function(response) {
+        alert(response);
+      },
+      error: function() {
+        alert("getSelection failed");
+      }
+    });
+  }
+  
+  function getCategories() {
+    console.log("ajax: getCategories");
+
+    jQuery.ajax({
+      type: 'GET',
+      dataType: 'html',
+      url: php_vars.ajax_url,
+      data: {
+        action: 'get_categories'
+      },
+      success: function(response) {
+        alert(response);
+      },
+      error: function() {
+        alert("getCategories failed");
+      }
+    });
+  }
+
+  // Set event handler
+  document.getElementById("demoButton").addEventListener("click", postSelection);
 
 }

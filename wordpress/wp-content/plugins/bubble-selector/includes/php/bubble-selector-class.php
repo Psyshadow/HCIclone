@@ -38,6 +38,13 @@ class BubbleSelector {
 
 		// Enqueue scripts
 		add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
+		
+		// Set callback TODO: put in own function
+    add_action('wp_ajax_post_selection', array($this, 'post_selection'));
+    add_action('wp_ajax_nopriv_post_selection', array($this, 'post_selection'));
+		add_action('wp_ajax_get_selection', array($this, 'get_selection'));
+	 	add_action('wp_ajax_get_categories', array($this, 'get_categories'));
+
 	}
 
 	/**
@@ -158,9 +165,6 @@ class BubbleSelector {
 			'ajax_url' => admin_url('admin-ajax.php')
 			));
 		
-		// Set callback for ajax request
-		add_action('wp_ajax_selection_callback', 'selection_callback');
-
 		//
 		// CSS
 		//
@@ -171,11 +175,32 @@ class BubbleSelector {
 	 * Ajax callback handler. 
 	 * Writes the selected topics to the database.
 	 */
-	public function selection_callback() {
+	public function post_selection() {
 		// Create db handle
 		global $wpdb;
 
-		echo $_POST.test;
+    $result = array("oh shit it worked!!!");
+    echo json_encode($result);
+
+		wp_die(); // This is required for some reason
+	}
+
+	public function get_selection() {
+		global $wpdb;
+
+		$result = "from get_selection()";
+		echo $result;
+
+		wp_die();  // This is required for some reason
+	}
+
+	public function get_categories() {
+		global $wpdb;
+
+		$result = "from get_categories()";
+		echo $result;
+
+		wp_die(); // This is required for some reason
 	}
 
 } // class BubbleSelector
