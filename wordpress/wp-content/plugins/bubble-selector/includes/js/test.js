@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', init, false);
 console.log(php_vars);
 
-// TODO add available topics from db (ajax)
 // TODO get interested topics from db (ajax)
 // TODO write interested topics to db (ajax)
 // TODO write add text labels to each circle
@@ -12,6 +11,38 @@ const g_blue = "#1e2931";
 sizeDivisor = 100; // Divides the gdp by 100 to get the size
 
 function init() {
+
+
+  // TODO replace with data from wpdb (pass from plugin)
+  // d3.csv("/wordpress/wp-content/plugins/bubble-selector/includes/js/data.csv", types, function (error, graph) {
+    // if (error) throw error;
+    // console.log(graph);
+  // });
+
+  // issue ajax call and create the graph on resolution.
+  getCategories().then(onData, function (err) { console.log(err); });
+
+  // Set event handler
+  document.getElementById("demoButton").addEventListener("click", getCategories);
+}
+
+/**
+ * Category ajax handler.
+ * @param {*} categories Array of available categories.
+ */
+function onData(categories) {
+  // add selected field to each node
+  console.log(categories);
+
+  categories.forEach(d => {
+    d.selected = false;
+    d.radius = 100;
+    d.size = 100;
+  });
+
+  // sort the nodes so that the bigger ones are at the back
+  categories = categories.sort(function (a, b) { return b.size - a.size; });
+
   var width = window.innerWidth,
     height = window.innerHeight,
     nodePadding = 2.5;
@@ -26,36 +57,6 @@ function init() {
     .force("forceY", d3.forceY().strength(.1).y(height * .5))
     .force("center", d3.forceCenter().x(width * .5).y(height * .5))
     .force("charge", d3.forceManyBody().strength(-15));
-
-  // TODO replace with data from wpdb (pass from plugin)
-  d3.csv("/wordpress/wp-content/plugins/bubble-selector/includes/js/data.csv", types, function (error, graph) {
-    if (error) throw error;
-    // console.log(graph);
-  });
-
-  // issue ajax call and create the graph on resolution.
-  getCategories().then(onCategory, function (err) { console.log(err); });
-
-  // Set event handler
-  document.getElementById("demoButton").addEventListener("click", getCategories);
-}
-
-/**
- * Category ajax handler.
- * @param {*} categories Array of available categories.
- */
-function onCategory(categories) {
-  // add selected field to each node
-  console.log(categories);
-
-  categories.foreach(d => {
-    d.selected = false;
-    d.radius = 100;
-    d.size = 100;
-  });
-
-  // sort the nodes so that the bigger ones are at the back
-  categories = categories.sort(function (a, b) { return b.size - a.size; });
 
   //update the simulation based on the data
   simulation
@@ -81,49 +82,51 @@ function onCategory(categories) {
       .on("drag", dragged)
       .on("end", dragended))
     .on("click", onClick)
-}
 
-function dragstarted(d) {
-  if (!d3.event.active) simulation.alphaTarget(.03).restart();
-  d.fx = d.x;
-  d.fy = d.y;
-}
+  function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(.03).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
 
-function dragged(d) {
-  d.fx = d3.event.x;
-  d.fy = d3.event.y;
-}
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
 
-function dragended(d) {
-  if (!d3.event.active) simulation.alphaTarget(.03);
-  d.fx = null;
-  d.fy = null;
-}
+  function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(.03);
+    d.fx = null;
+    d.fy = null;
+  }
 
-function types(d) {
-  d.gdp = +d.gdp;
-  d.size = +d.gdp / sizeDivisor;
-  d.size < 3 ? d.radius = 3 : d.radius = d.size;
-  return d;
-}
+  function types(d) {
+    d.gdp = +d.gdp;
+    d.size = +d.gdp / sizeDivisor;
+    d.size < 3 ? d.radius = 3 : d.radius = d.size;
+    return d;
+  }
 
-function onClick(d) {
-  // change selected state
-  d.selected = !d.selected;
+  function onClick(d) {
+    // change selected state
+    d.selected = !d.selected;
 
-  // Set color
-  if (d.selected) {
-    d3.select(this)
-      .attr("fill", function (d) {
-        return g_orange;
-      });
-  } else {
-    d3.select(this)
-      .attr("fill", function (d) {
-        return g_blue;
-      })
+    // Set color
+    if (d.selected) {
+      d3.select(this)
+        .attr("fill", function (d) {
+          return g_orange;
+        });
+    } else {
+      d3.select(this)
+        .attr("fill", function (d) {
+          return g_blue;
+        })
+    }
   }
 }
+
+
 
 // Ajax function to write the selection to the DB
 function postSelection() {
@@ -166,18 +169,11 @@ function getCategories() {
         action: 'get_categories'
       },
       success: function (response) {
-        resolve(response);
+        resolve(JSON.parse(response));
       },
       error: function (error) {
         reject(error);
       }
     });
   });
-}
-
-/**
- * Callback once the ajax response is received (categories)
- */
-function createGraph() {
-
 }

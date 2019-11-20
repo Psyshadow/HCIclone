@@ -192,8 +192,10 @@ class BubbleSelector {
 	public function get_categories() {
 		global $wpdb;
 
-		$result = "from get_categories()";
-		echo $result;
+		$query = "SELECT * FROM wp_terms;";
+		$result = $wpdb->get_results($query);
+		echo json_encode($result);
+		// echo json_encode($query);
 
 		wp_die(); // This is required for some reason
 	}
