@@ -39,11 +39,11 @@ class BubbleSelector {
 		// Enqueue scripts
 		add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
 		
-		// Set callback TODO: put in own function
+		// Set callbacks TODO: put in own function
     add_action('wp_ajax_post_selection', array($this, 'post_selection'));
-    add_action('wp_ajax_nopriv_post_selection', array($this, 'post_selection'));
-		add_action('wp_ajax_get_selection', array($this, 'get_selection'));
+		add_action('wp_ajax_nopriv_post_selection', array($this, 'post_selection'));
 	 	add_action('wp_ajax_get_categories', array($this, 'get_categories'));
+		add_action('wp_ajax_nopriv_get_categories', array($this, 'get_categories'));
 
 	}
 
@@ -185,15 +185,10 @@ class BubbleSelector {
 		wp_die(); // This is required for some reason
 	}
 
-	public function get_selection() {
-		global $wpdb;
-
-		$result = "from get_selection()";
-		echo $result;
-
-		wp_die();  // This is required for some reason
-	}
-
+	//TODO add properties: selected (read from different table)
+	/**
+	 * Handles ajax request. Sends categories as response.
+	 */
 	public function get_categories() {
 		global $wpdb;
 
