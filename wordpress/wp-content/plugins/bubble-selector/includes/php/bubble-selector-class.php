@@ -23,16 +23,20 @@ class BubbleSelector {
 	public $m_categories;
 
 	/// DB table name.
-	private $m_table_name;
+	private static $m_table_name;
+
+	/// DB table prefix.
+	private static $m_table_prefix;
 
 	/**
 	 * Register widget with WordPress.
 	 */
-	function __construct() {
+	function __construct($table_name_) {
 		global $wpdb;
 		$this->m_plugin_name = "Bubble-Selection";
 		$this->m_version = BUBBLE_SELECTOR_VERSION;
-		$this->m_table = $wpdb->prefix . "course_pref";
+
+		$this->table = $table_name_;
 		
 		// fetch categories from DB
 		$this->m_categories = getFromDB("SELECT * FROM 'wp_terms'");
@@ -51,8 +55,6 @@ class BubbleSelector {
 		add_action('wp_ajax_nopriv_post_selection', array($this, 'post_selection'));
 	 	add_action('wp_ajax_get_data', array($this, 'get_data'));
 		add_action('wp_ajax_nopriv_get_data', array($this, 'get_data'));
-
-		$this->createPluginTable();
 	}
 
 	/**
@@ -165,11 +167,10 @@ class BubbleSelector {
 		//
 		wp_register_script('d3js', 'https://d3js.org/d3.v4.min.js', null, null, true);
 		// JQuery is already registered as a default
-		wp_enqueue_script('test', plugin_dir_url(__FILE__).'../js/test.js', array('d3js', 'jquery'));
+		wp_enqueue_script('bubble_graph', plugin_dir_url(__FILE__).'../js/bubble_graph.js', array('d3js', 'jquery'));
 
 		// add variables from php to js
-		wp_localize_script('test', 'php_vars', array(
-			'test_value' => 4,
+		wp_localize_script('bubble_graph', 'php_vars', array(
 			'ajax_url' => admin_url('admin-ajax.php')
 			));
 		
@@ -206,6 +207,7 @@ class BubbleSelector {
 	public function get_data() {
 		global $wpdb;
 
+
 		// get the user id
 		$current_user = wp_get_current_user();
 		$user_id = $currente_user->ID;
@@ -226,36 +228,6 @@ class BubbleSelector {
 			);
 
 		wp_die(); // This is required for some reason
-	}
-
-	/**
-	 * Creates a table to be used with this plugin.
-	 */
-	private function createPluginTable() {
-		global $wpdb;
-
-		// check to see if table exists
-		if($wpdb->get_var("show tables like '$table'") != $table) {
-			$query = "CREATE TABLE $table_name (
-				id int NOT NULL AUTO_INCREMENT,
-				user_id int,
-				topic_id int,
-				PRIMARY KEY (id)
-				);";
-			$wpdb->query($query);
-		}
-	}
-
-	/**
-	 * Removes the table created for this plugin
-	 */
-	private function removePluginTable() {
-		global $wpd;
-
-		$table_name = $this->$m_table;
-
-		$sql = "DROP TABLE IF EXISTS $table_name";
-		$wpdb->query($sql);
 	}
 
 } // class BubbleSelector

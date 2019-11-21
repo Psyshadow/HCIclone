@@ -30,7 +30,7 @@ function init() {
 function onData(data) {
   console.log(data);
 
-  const categories = data.categories;
+  let categories = data.categories;
   g_selection = data.preferred;
 
   categories.forEach(d => {

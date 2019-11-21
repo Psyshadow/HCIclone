@@ -13,7 +13,26 @@ if ( !defined( 'ABSPATH' ) ) {
 
 define( 'BUBBLE_SELECTOR_VERSION', '0.0.1' );
 
-// Load class
-require_once(plugin_dir_path(__FILE__).'/includes/php/bubble-selector-class.php');
+// Activation and deactivation hooks
 
-$bubble_selector = new BubbleSelector();
+function activate_bubble_selector() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/php/class-bubble-selector-activator.php';
+	BubbelSelectorActivator::activate();
+}
+
+function deactivate_bubble_selector() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/php/class-bubble-selector-deactivator.php';
+	BubbleSelectorDeactivator::deactivate();
+}
+
+register_activation_hook( __FILE__, 'activate_bubble_selector' );
+register_deactivation_hook( __FILE__, 'deactivate_bubble_selector' );
+
+// -------------------------------------------------------------------
+
+// Load class
+require_once(plugin_dir_path(__FILE__) . '/includes/php/class-bubble-selector.php');
+
+$table_name = "test_table";
+
+$bubble_selector = new BubbleSelector($table_name);
