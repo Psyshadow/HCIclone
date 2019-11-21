@@ -5,6 +5,9 @@ require_once(plugin_dir_path(__FILE__).'db.php');
 // Make sure no other class named BubbleSelector exists to avoid fatal erros.
 if(!class_exists('BubbleSelector')) {
 
+// TODO create table:
+// preferred topics: id, user_id, id of preferred topic
+// (no column for each topics allows to expand topics without problem)
 /**
  * Bubble selector class definition.
  */
@@ -19,16 +22,20 @@ class BubbleSelector {
 	/// Learndash categories.
 	public $m_categories;
 
+	/// DB table name.
+	private $m_table_name;
+
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
-		$this->$m_plugin_name = "Bubble-Selection";
+		global $wpdb;
+		$this->m_plugin_name = "Bubble-Selection";
 		$this->m_version = BUBBLE_SELECTOR_VERSION;
+		$this->m_table = $wpdb->prefix . "course_pref";
 		
 		// fetch categories from DB
 		$this->m_categories = getFromDB("SELECT * FROM 'wp_terms'");
-
 
 		$this->definePublicHooks();
 		$this->defineAdminHooks();
@@ -42,9 +49,10 @@ class BubbleSelector {
 		// Set callbacks TODO: put in own function
     add_action('wp_ajax_post_selection', array($this, 'post_selection'));
 		add_action('wp_ajax_nopriv_post_selection', array($this, 'post_selection'));
-	 	add_action('wp_ajax_get_categories', array($this, 'get_categories'));
-		add_action('wp_ajax_nopriv_get_categories', array($this, 'get_categories'));
+	 	add_action('wp_ajax_get_data', array($this, 'get_data'));
+		add_action('wp_ajax_nopriv_get_data', array($this, 'get_data'));
 
+		$this->createPluginTable();
 	}
 
 	/**
@@ -179,25 +187,75 @@ class BubbleSelector {
 		// Create db handle
 		global $wpdb;
 
+		// get the user id
+		$current_user = wp_get_current_user();
+		$user_id = $current_user->ID;
+
+		$query = 
+
     $result = array("oh shit it worked!!!");
     echo json_encode($result);
 
 		wp_die(); // This is required for some reason
 	}
 
-	//TODO add properties: selected (read from different table)
+	//TODO add properties: (read from different table)
 	/**
-	 * Handles ajax request. Sends categories as response.
+	 * Handles ajax request.
 	 */
-	public function get_categories() {
+	public function get_data() {
 		global $wpdb;
 
+		// get the user id
+		$current_user = wp_get_current_user();
+		$user_id = $currente_user->ID;
+
+		// Get all the categories
 		$query = "SELECT * FROM wp_terms;";
-		$result = $wpdb->get_results($query);
-		echo json_encode($result);
-		// echo json_encode($query);
+		$categories = $wpdb->get_results($query);
+
+		// Get preferred categories
+		$query2 = "SELECT * FROM " . $this->m_table 
+			. " WHERE user_id='$user_id'";
+		$preferred = $wpdb->get_results($query2);
+
+		// Pack the categories such as preferred in the response;
+		echo json_encode(Array(
+			categories => $categories, 
+			preferred => $preferred)
+			);
 
 		wp_die(); // This is required for some reason
+	}
+
+	/**
+	 * Creates a table to be used with this plugin.
+	 */
+	private function createPluginTable() {
+		global $wpdb;
+
+		// check to see if table exists
+		if($wpdb->get_var("show tables like '$table'") != $table) {
+			$query = "CREATE TABLE $table_name (
+				id int NOT NULL AUTO_INCREMENT,
+				user_id int,
+				topic_id int,
+				PRIMARY KEY (id)
+				);";
+			$wpdb->query($query);
+		}
+	}
+
+	/**
+	 * Removes the table created for this plugin
+	 */
+	private function removePluginTable() {
+		global $wpd;
+
+		$table_name = $this->$m_table;
+
+		$sql = "DROP TABLE IF EXISTS $table_name";
+		$wpdb->query($sql);
 	}
 
 } // class BubbleSelector

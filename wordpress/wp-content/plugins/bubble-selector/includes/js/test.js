@@ -8,19 +8,16 @@ console.log(php_vars);
 const g_orange = "#fb7107";
 const g_blue = "#1e2931";
 
-sizeDivisor = 100; // Divides the gdp by 100 to get the size
+let g_selection = new Array();
+
+const sizeDivisor = 100; // Divides the gdp by 100 to get the size
 
 function init() {
 
-
-  // TODO replace with data from wpdb (pass from plugin)
-  // d3.csv("/wordpress/wp-content/plugins/bubble-selector/includes/js/data.csv", types, function (error, graph) {
-    // if (error) throw error;
-    // console.log(graph);
-  // });
-
   // issue ajax call and create the graph on resolution.
-  getCategories().then(onData, function (err) { console.log(err); });
+  getCategories().then(onData, function(err) {
+    console.log(err); 
+  });
 
   // Set event handler
   document.getElementById("demoButton").addEventListener("click", getCategories);
@@ -30,12 +27,18 @@ function init() {
  * Category ajax handler.
  * @param {*} categories Array of available categories.
  */
-function onData(categories) {
-  // add selected field to each node
-  console.log(categories);
+function onData(data) {
+  console.log(data);
+
+  const categories = data.categories;
+  g_selection = data.preferred;
 
   categories.forEach(d => {
-    d.selected = false;
+    if(g_selection.includes(d.term_id)) {
+      d.selectd = true;
+    } else {
+      d.selected = false;
+    }
     d.radius = 100;
     d.size = 100;
   });
@@ -113,11 +116,14 @@ function onData(categories) {
 
     // Set color
     if (d.selected) {
+      // TODO add element to selection
+
       d3.select(this)
         .attr("fill", function (d) {
           return g_orange;
         });
     } else {
+      // TODO remove element from selection
       d3.select(this)
         .attr("fill", function (d) {
           return g_blue;
@@ -125,8 +131,6 @@ function onData(categories) {
     }
   }
 }
-
-
 
 // Ajax function to write the selection to the DB
 function postSelection() {
@@ -136,10 +140,10 @@ function postSelection() {
   jQuery.ajax({
     type: 'POST',
     dataType: 'html',
-    url: php_vars.ajax_url, // url is passed from plugin
+    url: php_vars.ajax_url,
     data: {
-      action: 'post_selection', // set callback name (->wp_ajax_<action_name>)
-      test: 1
+      action: 'post_selection',
+      selected: g_preferred 
     },
     success: function (response) {
       alert(response);
@@ -166,7 +170,7 @@ function getCategories() {
       dataType: 'html',
       url: php_vars.ajax_url,
       data: {
-        action: 'get_categories'
+        action: 'get_data'
       },
       success: function (response) {
         resolve(JSON.parse(response));
