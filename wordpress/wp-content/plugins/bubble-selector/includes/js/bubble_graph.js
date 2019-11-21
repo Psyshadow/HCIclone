@@ -15,12 +15,12 @@ const sizeDivisor = 100; // Divides the gdp by 100 to get the size
 function init() {
 
   // issue ajax call and create the graph on resolution.
-  getCategories().then(onData, function(err) {
+  getData().then(onData, function(err) {
     console.log(err); 
   });
 
   // Set event handler
-  document.getElementById("demoButton").addEventListener("click", getCategories);
+  document.getElementById("postButton").addEventListener("click", postSelection);
 }
 
 /**
@@ -77,7 +77,13 @@ function onData(data) {
     .data(categories)
     .enter().append("circle")
     .attr("r", function (d) { return d.radius; })
-    .attr("fill", function () { return g_blue; })
+    .attr("fill", function (d) { 
+      if(d.selected) {
+        return g_orange;
+      } else {
+        return g_blue;  
+      }
+    })
     .attr("cx", function (d) { return d.x; })
     .attr("cy", function (d) { return d.y; })
     .call(d3.drag()
@@ -116,19 +122,29 @@ function onData(data) {
 
     // Set color
     if (d.selected) {
-      // TODO add element to selection
+      // Add term_id to g_selection array
+      g_selection.push(d.term_id);
 
+      // Set color
       d3.select(this)
         .attr("fill", function (d) {
           return g_orange;
         });
     } else {
-      // TODO remove element from selection
+      // Remove term_id from g_selection array
+      const index = g_selection.indexOf(d.term_id);
+      if (index > -1) {
+        g_selection.splice(index, 1);
+      }
+
+      // Set color
       d3.select(this)
         .attr("fill", function (d) {
           return g_blue;
         })
     }
+
+    console.log(g_selection);
   }
 }
 
@@ -143,10 +159,10 @@ function postSelection() {
     url: php_vars.ajax_url,
     data: {
       action: 'post_selection',
-      selected: g_preferred 
+      selection: g_selection 
     },
     success: function (response) {
-      alert(response);
+      alert("success");
     },
     error: function (jqXHR, textStatus, errorThrown) {
       // console.log("...failed: " + errorThrown + "!");
@@ -161,8 +177,8 @@ function postSelection() {
  * function should be passed to execute once the response is
  * received.
  */
-function getCategories() {
-  console.log("ajax: getCategories");
+function getData() {
+  console.log("ajax: getData");
 
   return new Promise((resolve, reject) => {
     jQuery.ajax({
@@ -173,6 +189,7 @@ function getCategories() {
         action: 'get_data'
       },
       success: function (response) {
+        // Pass the data as JSON to the callback
         resolve(JSON.parse(response));
       },
       error: function (error) {

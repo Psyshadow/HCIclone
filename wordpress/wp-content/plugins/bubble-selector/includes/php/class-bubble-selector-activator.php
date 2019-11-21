@@ -4,16 +4,16 @@
  *
  * This class defines all code necessary to run during the plugin's activation.
  *
- * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @since      0.0.1
+ * @package    bubble-selector
+ * @subpackage bubble-selector/includes
+ * @author     Beat Scherrer <beat.scherrer@gmail.com>
  */
 class BubbleSelectorActivator {
 	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
+	 * Activation function.
+	 * This function creates the database used by
+	 * the bubble-selector plugin.
 	 *
 	 * @since    1.0.0
 	 */

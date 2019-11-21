@@ -4,10 +4,10 @@
  *
  * This class defines all code necessary to run during the plugin's deactivation.
  *
- * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @since      0.0.1
+ * @package    bubble-selector
+ * @subpackage bubble-selector/includes
+ * @author     Beat Scherrer <beat.scherrer@gmail.com>
  */
 class BubbleSelectorDeactivator {
 	/**
@@ -21,9 +21,10 @@ class BubbleSelectorDeactivator {
 		//
 		// remove database table
 		//
-		global $wpd;
 
-		$sql = "DROP TABLE IF EXISTS 'test_table'";
-		$wpdb->query($sql);
+		// global $wpd;
+
+		// $sql = "DROP TABLE IF EXISTS 'test_table'";
+		// $wpdb->query($sql);
 	}
 }

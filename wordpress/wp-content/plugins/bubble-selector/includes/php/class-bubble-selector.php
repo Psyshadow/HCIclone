@@ -153,7 +153,8 @@ class BubbleSelector {
 		$content .= "}\r\n";
 		$content .= "</style>\r\n";
 		$content .= '<h3 class="demoClass" id="demoId"> Check it out!</h3>';
-		$content .= '<button id="demoButton">demobutton</button>';
+		$content .= '<button id="getButton">get Button</button>';
+		$content .= '<button id="postButton">post Button</button>';
 		$content .= '<div id="bubbleGraph"></div>';
 		return $content;
 	}
@@ -192,10 +193,12 @@ class BubbleSelector {
 		$current_user = wp_get_current_user();
 		$user_id = $current_user->ID;
 
-		$query = 
+		// add a row
+		foreach ($POST_.selection as $id) {
+		  $wpdb->replace("test_table", Array('user_id' => $user_id, 'topic_id' => $id), Array('%d', '%d')); // add topic key
+		}
 
-    $result = array("oh shit it worked!!!");
-    echo json_encode($result);
+    echo "success";
 
 		wp_die(); // This is required for some reason
 	}
@@ -207,7 +210,6 @@ class BubbleSelector {
 	public function get_data() {
 		global $wpdb;
 
-
 		// get the user id
 		$current_user = wp_get_current_user();
 		$user_id = $currente_user->ID;
@@ -217,8 +219,7 @@ class BubbleSelector {
 		$categories = $wpdb->get_results($query);
 
 		// Get preferred categories
-		$query2 = "SELECT * FROM " . $this->m_table 
-			. " WHERE user_id='$user_id'";
+		$query2 = "SELECT * FROM 'test_table' WHERE user_id='$user_id'";
 		$preferred = $wpdb->get_results($query2);
 
 		// Pack the categories such as preferred in the response;
