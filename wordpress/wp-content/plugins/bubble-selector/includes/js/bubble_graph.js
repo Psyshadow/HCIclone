@@ -5,22 +5,21 @@ console.log(php_vars);
 // TODO write interested topics to db (ajax)
 // TODO write add text labels to each circle
 
-const g_orange = "#fb7107";
-const g_blue = "#1e2931";
+const g_orange = '#fb7107';
+const g_blue = '#1e2931';
 
 let g_selection = new Array();
 
-const sizeDivisor = 100; // Divides the gdp by 100 to get the size
-
 function init() {
-
   // issue ajax call and create the graph on resolution.
   getData().then(onData, function(err) {
-    console.log(err); 
+    console.log(err);
   });
 
   // Set event handler
-  document.getElementById("postButton").addEventListener("click", postSelection);
+  document
+    .getElementById('postButton')
+    .addEventListener('click', postSelection);
 }
 
 /**
@@ -34,7 +33,7 @@ function onData(data) {
   g_selection = data.preferred;
 
   categories.forEach(d => {
-    if(g_selection.includes(d.term_id)) {
+    if (g_selection.includes(d.term_id)) {
       d.selectd = true;
     } else {
       d.selected = false;
@@ -44,56 +43,120 @@ function onData(data) {
   });
 
   // sort the nodes so that the bigger ones are at the back
-  categories = categories.sort(function (a, b) { return b.size - a.size; });
+  categories = categories.sort(function(a, b) {
+    return b.size - a.size;
+  });
 
   var width = window.innerWidth,
     height = window.innerHeight,
     nodePadding = 2.5;
 
-  var svg = d3.select("#bubbleGraph")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+  // Create SVG
+  var svg = d3
+    .select('#bubbleGraph')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height);
 
-  var simulation = d3.forceSimulation()
-    .force("forceX", d3.forceX().strength(.1).x(width * .5))
-    .force("forceY", d3.forceY().strength(.1).y(height * .5))
-    .force("center", d3.forceCenter().x(width * .5).y(height * .5))
-    .force("charge", d3.forceManyBody().strength(-15));
+  // Create force simulation
+  var simulation = d3
+    .forceSimulation()
+    .force(
+      'forceX',
+      d3
+        .forceX()
+        .strength(0.1)
+        .x(width * 0.5)
+    )
+    .force(
+      'forceY',
+      d3
+        .forceY()
+        .strength(0.1)
+        .y(height * 0.5)
+    )
+    .force(
+      'center',
+      d3
+        .forceCenter()
+        .x(width * 0.5)
+        .y(height * 0.5)
+    )
+    .force('charge', d3.forceManyBody().strength(-15));
 
   //update the simulation based on the data
   simulation
     .nodes(categories)
-    .force("collide", d3.forceCollide().strength(.5).radius(function (d) { return d.radius + nodePadding; }).iterations(1))
-    .on("tick", function (d) {
-      node
-        .attr("cx", function (d) { return d.x; })
-        .attr("cy", function (d) { return d.y; })
+    .force(
+      'collide',
+      d3
+        .forceCollide()
+        .strength(0.5)
+        .radius(function(d) {
+          return d.radius + nodePadding;
+        })
+        .iterations(1)
+    )
+    .on('tick', function() {
+      node.attr('transform', function(d) {
+        return 'translate(' + d.x + ',' + d.y + ')';
+      });
     });
 
-  var node = svg.append("g")
-    .attr("class", "node")
-    .selectAll("circle")
+  // Create circles for each node
+  var node = svg
+    .append('g')
+    .attr('class', 'nodes')
+    .selectAll('g')
     .data(categories)
-    .enter().append("circle")
-    .attr("r", function (d) { return d.radius; })
-    .attr("fill", function (d) { 
-      if(d.selected) {
+    .enter()
+    .append('g')
+    .on('click', onClick)
+    .call(
+      d3
+        .drag()
+        .on('start', dragstarted)
+        .on('drag', dragged)
+        .on('end', dragended)
+    );
+
+  var circles = node
+    .append('circle')
+    .attr('r', function(d) {
+      return d.radius;
+    })
+    .attr('fill', function(d) {
+      if (d.selected) {
         return g_orange;
       } else {
-        return g_blue;  
+        return g_blue;
       }
     })
-    .attr("cx", function (d) { return d.x; })
-    .attr("cy", function (d) { return d.y; })
-    .call(d3.drag()
-      .on("start", dragstarted)
-      .on("drag", dragged)
-      .on("end", dragended))
-    .on("click", onClick)
+    .attr('cx', function(d) {
+      return d.x;
+    })
+    .attr('cy', function(d) {
+      return d.y;
+    });
+
+  // Add labels
+  var label = node
+    .append('text')
+    .attr('cx', function(d) {
+      return d.x;
+    })
+    .attr('cy', function(d) {
+      return d.y;
+    })
+    .text(function(d) {
+      return d.name;
+    })
+    .style('text-anchor', 'middle')
+    .style('font-size', 25)
+    .style('fill', 'red');
 
   function dragstarted(d) {
-    if (!d3.event.active) simulation.alphaTarget(.03).restart();
+    if (!d3.event.active) simulation.alphaTarget(0.03).restart();
     d.fx = d.x;
     d.fy = d.y;
   }
@@ -104,32 +167,32 @@ function onData(data) {
   }
 
   function dragended(d) {
-    if (!d3.event.active) simulation.alphaTarget(.03);
+    if (!d3.event.active) simulation.alphaTarget(0.03);
     d.fx = null;
     d.fy = null;
   }
 
-  function types(d) {
-    d.gdp = +d.gdp;
-    d.size = +d.gdp / sizeDivisor;
-    d.size < 3 ? d.radius = 3 : d.radius = d.size;
-    return d;
-  }
-
   function onClick(d) {
     // change selected state
+
+    console.log(d3.select(this).select('circle'));
+
     d.selected = !d.selected;
+
+    const group = d3.select(this);
+
+    // console.log(d);
 
     // Set color
     if (d.selected) {
       // Add term_id to g_selection array
       g_selection.push(d.term_id);
 
-      // Set color
-      d3.select(this)
-        .attr("fill", function (d) {
-          return g_orange;
-        });
+      // Set circle color
+      group.select('circle').attr('fill', g_orange);
+
+      // Set text color
+      group.select('label').style('fill', 'darkBlue');
     } else {
       // Remove term_id from g_selection array
       const index = g_selection.indexOf(d.term_id);
@@ -137,20 +200,24 @@ function onData(data) {
         g_selection.splice(index, 1);
       }
 
-      // Set color
-      d3.select(this)
-        .attr("fill", function (d) {
-          return g_blue;
-        })
-    }
+      // set circle color
+      group.select('circle').attr('fill', g_blue);
 
-    console.log(g_selection);
+      // set text color
+      group.select('text').style('fill', 'orange');
+    }
   }
+}
+
+function onTick() {
+  node.attr('transform', function(d) {
+    return 'translate(' + d.cx + ', ' + d.cy + ')';
+  });
 }
 
 // Ajax function to write the selection to the DB
 function postSelection() {
-  console.log("issue ajax request...\n ");
+  console.log('issue ajax request...\n ');
   // get all selected items id's
 
   jQuery.ajax({
@@ -159,15 +226,17 @@ function postSelection() {
     url: php_vars.ajax_url,
     data: {
       action: 'post_selection',
-      selection: g_selection 
+      selection: g_selection
     },
-    success: function (response) {
-      alert("success");
+    success: function() {
+      alert('success');
     },
-    error: function (jqXHR, textStatus, errorThrown) {
+    error: function(jqXHR, textStatus, errorThrown) {
       // console.log("...failed: " + errorThrown + "!");
-      console.log(JSON.stringify(jqXHR) + ' :: ' + textStatus + ' :: ' + errorThrown);
-      alert("Ajax request failed...");
+      console.log(
+        JSON.stringify(jqXHR) + ' :: ' + textStatus + ' :: ' + errorThrown
+      );
+      alert('Ajax request failed...');
     }
   });
 }
@@ -178,7 +247,7 @@ function postSelection() {
  * received.
  */
 function getData() {
-  console.log("ajax: getData");
+  console.log('ajax: getData');
 
   return new Promise((resolve, reject) => {
     jQuery.ajax({
@@ -188,11 +257,11 @@ function getData() {
       data: {
         action: 'get_data'
       },
-      success: function (response) {
+      success: function(response) {
         // Pass the data as JSON to the callback
         resolve(JSON.parse(response));
       },
-      error: function (error) {
+      error: function(error) {
         reject(error);
       }
     });
