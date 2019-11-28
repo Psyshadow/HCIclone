@@ -38,8 +38,10 @@ function onData(data) {
     } else {
       d.selected = false;
     }
-    d.radius = 100;
-    d.size = 100;
+
+    // TODO set radius according to category size or some other metric
+    d.radius = 80;
+    d.radius += (Math.random() - 0.5) * 30; // Get some mock size variation
   });
 
   // sort the nodes so that the bigger ones are at the back
@@ -49,7 +51,7 @@ function onData(data) {
 
   var width = window.innerWidth,
     height = window.innerHeight,
-    nodePadding = 2.5;
+    nodePadding = 0;
 
   // Create SVG
   var svg = d3
@@ -103,7 +105,9 @@ function onData(data) {
       });
     });
 
-  // Create circles for each node
+  //
+  // nodes
+  //
   var node = svg
     .append('g')
     .attr('class', 'nodes')
@@ -120,6 +124,9 @@ function onData(data) {
         .on('end', dragended)
     );
 
+  //
+  // Circles
+  //
   var circles = node
     .append('circle')
     .attr('r', function(d) {
@@ -139,7 +146,9 @@ function onData(data) {
       return d.y;
     });
 
-  // Add labels
+  //
+  // Labels
+  //
   var label = node
     .append('text')
     .attr('cx', function(d) {
@@ -149,10 +158,12 @@ function onData(data) {
       return d.y;
     })
     .text(function(d) {
-      return d.name;
+      console.log(d.name.split(' ').join('\n'));
+      return d.name.split(' ').join('\n');
     })
     .style('text-anchor', 'middle')
-    .style('font-size', 25)
+    .style('font-size', 20)
+    .style('font-weight', 900)
     .style('fill', function(d) {
       if (d.selected) {
         return 'blue';

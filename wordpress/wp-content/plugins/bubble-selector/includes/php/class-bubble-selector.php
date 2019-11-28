@@ -5,9 +5,10 @@ require_once(plugin_dir_path(__FILE__).'db.php');
 // Make sure no other class named BubbleSelector exists to avoid fatal erros.
 if(!class_exists('BubbleSelector')) {
 
-// TODO create table:
-// preferred topics: id, user_id, id of preferred topic
-// (no column for each topics allows to expand topics without problem)
+// TODO conditional loading. Only load javascript when the plugin is used
+// TODO investigate if shortcode is best approach to load this plugin.
+// TODO read correct tables
+// TODO write preferred categories to table
 /**
  * Bubble selector class definition.
  */
@@ -184,6 +185,8 @@ class BubbleSelector {
 	/**
 	 * Ajax callback handler. 
 	 * Writes the selected topics to the database.
+	 * 
+	 * TODO change to more sophisticated updates.
 	 */
 	public function post_selection() {
 		// Create db handle
@@ -193,12 +196,22 @@ class BubbleSelector {
 		$current_user = wp_get_current_user();
 		$user_id = $current_user->ID;
 
-		// add a row
-		foreach ($POST_.selection as $id) {
-		  $wpdb->replace("test_table", Array('user_id' => $user_id, 'topic_id' => $id), Array('%d', '%d')); // add topic key
-		}
+		// first delete all rows for user
+		$wpdb->delete("test_table", Array('user_id' => $user_id));
 
-    echo "success";
+		$wpdb->insert("test_table", Array('user_id' => $user_id, 'topic_id' => 1));
+
+		echo json_encode($POST_);
+
+		// add a row for each selection
+		// foreach ($POST_.selection as $id) {
+		// 	$wpdb->insert("test_table", 
+		// 	Array(
+		// 		'user_id' => $user_id, 
+		// 		'topic_id' => $id
+		// 	), 
+		// 	Array('%d', '%d')); // add topic key
+		// }
 
 		wp_die(); // This is required for some reason
 	}
@@ -210,6 +223,13 @@ class BubbleSelector {
 	public function get_data() {
 		global $wpdb;
 
+		/* The category taxonomy is list in the table _term_taxonomy.
+		All the terms are listed in the _terms table.
+
+		Therefore retrieve the wanted taxonomy in _term_taxonomy and fetch
+		the corresponding term_id's in the _terms table.
+		*/
+
 		// get the user id
 		$current_user = wp_get_current_user();
 		$user_id = $currente_user->ID;
@@ -219,7 +239,7 @@ class BubbleSelector {
 		$categories = $wpdb->get_results($query);
 
 		// Get preferred categories
-		$query2 = "SELECT * FROM 'test_table' WHERE user_id='$user_id'";
+		$query2 = "SELECT * FROM test_table WHERE user_id=$user_id";
 		$preferred = $wpdb->get_results($query2);
 
 		// Pack the categories such as preferred in the response;
