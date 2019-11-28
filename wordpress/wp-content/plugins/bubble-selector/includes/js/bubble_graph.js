@@ -153,7 +153,13 @@ function onData(data) {
     })
     .style('text-anchor', 'middle')
     .style('font-size', 25)
-    .style('fill', 'red');
+    .style('fill', function(d) {
+      if (d.selected) {
+        return 'blue';
+      } else {
+        return 'orange';
+      }
+    });
 
   function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.03).restart();
@@ -185,26 +191,30 @@ function onData(data) {
 
     // Set color
     if (d.selected) {
+      console.log(d.name + ' selected');
+
       // Add term_id to g_selection array
       g_selection.push(d.term_id);
 
-      // Set circle color
+      // Set circle color (color in hex)
       group.select('circle').attr('fill', g_orange);
 
-      // Set text color
-      group.select('label').style('fill', 'darkBlue');
+      // Set text color (color in weird)
+      group.select('text').style('fill', 'black');
     } else {
+      console.log(d.name + ' deselected');
+
       // Remove term_id from g_selection array
       const index = g_selection.indexOf(d.term_id);
       if (index > -1) {
         g_selection.splice(index, 1);
       }
 
-      // set circle color
+      // set circle color (color in hex)
       group.select('circle').attr('fill', g_blue);
 
-      // set text color
-      group.select('text').style('fill', 'orange');
+      // set text color (color in weird)
+      group.select('text').style('fill', 'darkOrange');
     }
   }
 }
