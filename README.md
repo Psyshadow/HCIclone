@@ -32,7 +32,7 @@ Optional: in this part you can document ideation and prototyping process (e.g. d
 During the exercise session from **03/10/2019**, the information received during the stakeholder interview in the morning of the same day has been recapped. 
 The team members wrote down one term or a short phrase on sticky notes. 
 <p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://raw.githubusercontent.com/eth-ait/hci-project-group9/master/img/affinitycluster.jpeg?raw=true">         
+  <img style="width:30%;align:left" src="https://raw.githubusercontent.com/eth-ait/hci-project-group9/master/img/affinitycluster.jpeg?token=ANJ7NDMJAP43IZMF6YG5XDK5XMG6Y">         
 </p>
 
 By placing the sticky notes on the table the task has been divided into clusters and the problem has been reframed. The reframing of the problem leads to a guided solution search and a meaning of need-finding data is made.
@@ -113,6 +113,9 @@ Optional: in this part you can also document the prototyping process: show diffe
 ### Low-fi Prototypes
 The task of the exercise session **24/10/2019** was to do prototyping. Prototyping helps to narrow down and test ideas. In a first phase, we only did low-fi, paper prototypes since this helps to boost discussions and since the prototypes are only made out of paper it is more likely to throw an idea away and it is cost-and-time-effective. 
 Since the time in the exercise session was not enough the team decided that all team members continue doing paper prototypes at home, these prototypes will then be discussed during the team meeting of the **29/10/2019**.
+
+### User Study
+
 
 ## Final solution
     TODO
