@@ -124,7 +124,7 @@ In the user study the following three topics have been examined:
 
 The study has been conducted on 9 participants. Three different approaches have been chosen to gather insights on the three main topics to be investigated.
 
-The User Study Reoport where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf).
+The User Study Report where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf).
 
 ## Final solution
     TODO
