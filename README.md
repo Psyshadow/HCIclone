@@ -115,7 +115,16 @@ The task of the exercise session **24/10/2019** was to do prototyping. Prototypi
 Since the time in the exercise session was not enough the team decided that all team members continue doing paper prototypes at home, these prototypes will then be discussed during the team meeting of the **29/10/2019**.
 
 ### User Study
+To understand the needs of the users, how intuitively the website design is and if all the features are necessary, a user study has been set up.
 
+In the user study the following three topics have been examined:
+- Landing Page
+- Interest Check
+- Communication Platform
+
+The study has been conducted on 9 participants. Three different approaches have been chosen to gather insights on the three main topics to be investigated.
+
+The User Study Reoport where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf).
 
 ## Final solution
     TODO
