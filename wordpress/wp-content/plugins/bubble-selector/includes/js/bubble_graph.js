@@ -3,7 +3,6 @@ console.log(php_vars);
 
 // TODO get interested topics from db (ajax)
 // TODO write interested topics to db (ajax)
-// TODO write add text labels to each circle
 
 const g_orange = '#fb7107';
 const g_blue = '#1e2931';
@@ -107,11 +106,10 @@ function onData(data) {
 
   //
   // nodes
-  //
   var node = svg
     .append('g')
     .attr('class', 'nodes')
-    .selectAll('g')
+    .selectAll('nodes')
     .data(categories)
     .enter()
     .append('g')
@@ -126,7 +124,6 @@ function onData(data) {
 
   //
   // Circles
-  //
   var circles = node
     .append('circle')
     .attr('r', function(d) {
@@ -146,32 +143,64 @@ function onData(data) {
       return d.y;
     });
 
+  node.each(function(d) {
+    var instance = d3.select(this);
+
+    const array = d.name.split(' ');
+    array.forEach(function(value, i) {
+      // replace ampersand
+      value = value.replace(/&amp;/g, '&');
+
+      instance
+        .append('text')
+        .text(value.replace())
+        .attr('transform', `translate(0, ${i * 24})`)
+        .attr('dx', function(d) {
+          return d.x;
+        })
+        .attr('dy', function(d) {
+          return d.y;
+        })
+        .style('font-size', '18px')
+        .attr('text-anchor', 'middle')
+        .style('fill', 'green');
+    });
+  });
+
   //
   // Labels
-  //
-  var label = node
-    .append('text')
-    .attr('cx', function(d) {
-      return d.x;
-    })
-    .attr('cy', function(d) {
-      return d.y;
-    })
-    .text(function(d) {
-      console.log(d.name.split(' ').join('\n'));
-      return d.name.split(' ').join('\n');
-    })
-    .style('text-anchor', 'middle')
-    .style('font-size', 20)
-    .style('font-weight', 900)
-    .style('fill', function(d) {
-      if (d.selected) {
-        return 'blue';
-      } else {
-        return 'orange';
-      }
-    });
+  // var label = node
+  //   .append('text')
+  //   .attr('cx', function(d) {
+  //     return d.x;
+  //   })
+  //   .attr('cy', function(d) {
+  //     return d.y;
+  //   })
+  //   .text(function(d) {
+  //     const array = d.name.split(' ');
+  //     console.log(array);
+  //     if (array.length > 1) {
+  //       console.log('a');
+  //     }
 
+  //     return array[1];
+  //   })
+  //   .style('text-anchor', 'middle')
+  //   .style('font-size', 20)
+  //   .style('font-weight', 900)
+  //   .style('fill', function(d) {
+  //     if (d.selected) {
+  //       return 'blue';
+  //     } else {
+  //       return 'orange';
+  //     }
+  //   });
+
+  // Since line breaks do not work in svg we need this ugly workaround
+
+  //
+  // Drag functions
   function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.03).restart();
     d.fx = d.x;
@@ -189,6 +218,8 @@ function onData(data) {
     d.fy = null;
   }
 
+  //
+  // Circle Click handler
   function onClick(d) {
     // change selected state
 
@@ -211,7 +242,7 @@ function onData(data) {
       group.select('circle').attr('fill', g_orange);
 
       // Set text color (color in weird)
-      group.select('text').style('fill', 'black');
+      group.selectAll('text').style('fill', 'black');
     } else {
       console.log(d.name + ' deselected');
 
@@ -225,16 +256,22 @@ function onData(data) {
       group.select('circle').attr('fill', g_blue);
 
       // set text color (color in weird)
-      group.select('text').style('fill', 'darkOrange');
+      group.selectAll('text').style('fill', 'darkOrange');
     }
   }
 }
 
+//
+// Simulation update tick
 function onTick() {
   node.attr('transform', function(d) {
     return 'translate(' + d.cx + ', ' + d.cy + ')';
   });
 }
+
+//
+// Ajax functions
+//
 
 // Ajax function to write the selection to the DB
 function postSelection() {
