@@ -1,19 +1,81 @@
 document.addEventListener('DOMContentLoaded', init, false);
 console.log(php_vars);
 
-// TODO get interested topics from db (ajax)
-// TODO write interested topics to db (ajax)
-
 const g_orange = '#fb7107';
 const g_blue = '#1e2931';
 
 let g_selection = new Array();
 
+// Mock data
+const data = {
+  categories: [
+    {
+      term_id: 1,
+      name: 'Networking',
+      slug: 'networking',
+      term_group: 0
+    },
+    {
+      term_id: 2,
+      name: 'Persuasion & Sales',
+      slug: 'persuasion and sales',
+      term_group: 0
+    },
+    {
+      term_id: 3,
+      name: 'Design',
+      slug: 'design',
+      term_group: 0
+    },
+    {
+      term_id: 4,
+      name: 'Coding',
+      slug: 'coding',
+      term_group: 0
+    },
+    {
+      term_id: 5,
+      name: 'Leadership',
+      slug: 'leadership',
+      term_group: 0
+    },
+    {
+      term_id: 6,
+      name: 'Culture',
+      slug: 'culture',
+      term_group: 0
+    },
+    {
+      term_id: 7,
+      name: 'Team Building',
+      slug: 'team building',
+      term_group: 0
+    },
+    {
+      term_id: 8,
+      name: 'Mindset',
+      slug: 'mindset',
+      term_group: 0
+    },
+    {
+      term_id: 9,
+      name: 'Self Management',
+      slug: 'self management',
+      term_group: 0
+    }
+  ],
+  preferred: [1, 2, 3]
+};
+
 function init() {
+  // TODO reenable ajax request
   // issue ajax call and create the graph on resolution.
-  getData().then(onData, function(err) {
-    console.log(err);
-  });
+  // getData().then(onData, function(err) {
+  //   console.log(err);
+  // });
+
+  // user mock data
+  onData(data);
 
   // Set event handler
   document
@@ -33,10 +95,13 @@ function onData(data) {
 
   categories.forEach(d => {
     if (g_selection.includes(d.term_id)) {
-      d.selectd = true;
+      d.selected = true;
     } else {
       d.selected = false;
     }
+
+    console.log('test');
+    console.log(d);
 
     // TODO set radius according to category size or some other metric
     d.radius = 80;
@@ -143,6 +208,8 @@ function onData(data) {
       return d.y;
     });
 
+  //
+  // Labels
   node.each(function(d) {
     var instance = d3.select(this);
 
@@ -161,43 +228,18 @@ function onData(data) {
         .attr('dy', function(d) {
           return d.y;
         })
-        .style('font-size', '18px')
+        .style('font-size', '22px')
+        .style('font-weight', 'bold')
         .attr('text-anchor', 'middle')
-        .style('fill', 'green');
+        .style('fill', function(d) {
+          if (d.selected) {
+            return 'black';
+          } else {
+            return 'orange';
+          }
+        });
     });
   });
-
-  //
-  // Labels
-  // var label = node
-  //   .append('text')
-  //   .attr('cx', function(d) {
-  //     return d.x;
-  //   })
-  //   .attr('cy', function(d) {
-  //     return d.y;
-  //   })
-  //   .text(function(d) {
-  //     const array = d.name.split(' ');
-  //     console.log(array);
-  //     if (array.length > 1) {
-  //       console.log('a');
-  //     }
-
-  //     return array[1];
-  //   })
-  //   .style('text-anchor', 'middle')
-  //   .style('font-size', 20)
-  //   .style('font-weight', 900)
-  //   .style('fill', function(d) {
-  //     if (d.selected) {
-  //       return 'blue';
-  //     } else {
-  //       return 'orange';
-  //     }
-  //   });
-
-  // Since line breaks do not work in svg we need this ugly workaround
 
   //
   // Drag functions
