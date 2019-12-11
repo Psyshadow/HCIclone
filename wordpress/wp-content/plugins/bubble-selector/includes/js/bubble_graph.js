@@ -74,13 +74,8 @@ function init() {
   //   console.log(err);
   // });
 
-  // user mock data
+  // use mock data
   onData(data);
-
-  // Set event handler
-  document
-    .getElementById('postButton')
-    .addEventListener('click', postSelection);
 }
 
 /**
@@ -100,12 +95,9 @@ function onData(data) {
       d.selected = false;
     }
 
-    console.log('test');
-    console.log(d);
-
     // TODO set radius according to category size or some other metric
     d.radius = 80;
-    d.radius += (Math.random() - 0.5) * 30; // Get some mock size variation
+    d.radius += (Math.random() - 0.5) * 20; // Get some mock size variation
   });
 
   // sort the nodes so that the bigger ones are at the back
@@ -113,9 +105,12 @@ function onData(data) {
     return b.size - a.size;
   });
 
-  var width = window.innerWidth,
-    height = window.innerHeight,
-    nodePadding = 0;
+  // var width = window.innerWidth,
+  //   height = window.innerHeight,
+  //   nodePadding = 0;
+  const width = 800;
+  const height = 800;
+  const nodePadding = 0;
 
   // Create SVG
   var svg = d3

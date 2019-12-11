@@ -153,9 +153,6 @@ class BubbleSelector {
 		$content .= "color: #26b158";
 		$content .= "}\r\n";
 		$content .= "</style>\r\n";
-		$content .= '<h3 class="demoClass" id="demoId"> Check it out!</h3>';
-		$content .= '<button id="getButton">get Button</button>';
-		$content .= '<button id="postButton">post Button</button>';
 		$content .= '<div id="bubbleGraph"></div>';
 		return $content;
 	}
@@ -166,20 +163,18 @@ class BubbleSelector {
 	public function enqueueScripts() {
 		//
 		// Javscript
-		//
-		wp_register_script('d3js', 'https://d3js.org/d3.v4.min.js', null, null, true);
+		wp_register_script( 'd3js', 'https://d3js.org/d3.v4.min.js', null, null, true );
 		// JQuery is already registered as a default
-		wp_enqueue_script('bubble_graph', plugin_dir_url(__FILE__).'../js/bubble_graph.js', array('d3js', 'jquery'));
+		wp_enqueue_script( 'bubble_graph', plugin_dir_url(__FILE__).'../js/bubble_graph.js', array('d3js', 'jquery') );
 
-		// add variables from php to js
-		wp_localize_script('bubble_graph', 'php_vars', array(
+		// pass variables from php to js
+		wp_localize_script( 'bubble_graph', 'php_vars', array(
 			'ajax_url' => admin_url('admin-ajax.php')
-			));
+			) );
 		
 		//
 		// CSS
-		//
-		wp_register_style('my_style', plugin_dir_url(__FILE__).'../css/test_style.css');
+		wp_enqueue_style( 'style', plugin_dir_url(__FILE__) . '../css/style.css' );
 	}
 
 	/**
