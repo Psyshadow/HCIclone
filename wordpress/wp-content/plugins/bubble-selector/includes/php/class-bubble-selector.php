@@ -9,6 +9,7 @@ if(!class_exists('BubbleSelector')) {
 // TODO investigate if shortcode is best approach to load this plugin.
 // TODO read correct tables
 // TODO write preferred categories to table
+// TODO refactor hooks (public & admin)
 /**
  * Bubble selector class definition.
  */
@@ -80,12 +81,12 @@ class BubbleSelector {
 	}
 
 
-	// TODO hook in stuff...
+	// TODO refactor hooks
 	private function definePublicHooks() {
 
 	}
 
-	// TODO hook in stuff...
+	// TODO refactor hooks
 	private function defineAdminHooks() {}
 
 	public function run() {}
@@ -218,11 +219,11 @@ class BubbleSelector {
 	public function get_data() {
 		global $wpdb;
 
-		/* The category taxonomy is list in the table _term_taxonomy.
-		All the terms are listed in the _terms table.
+		/* The category taxonomy is listed in the table '<prefix>_term_taxonomy'.
+		All the terms are listed in the '<prefix>_terms' table.
 
-		Therefore retrieve the wanted taxonomy in _term_taxonomy and fetch
-		the corresponding term_id's in the _terms table.
+		Therefore retrieve the wanted taxonomy in '<prefix>_term_taxonomy' and fetch
+		the corresponding term_id's in the '<prefix>_terms' table.
 		*/
 
 		// get the user id
