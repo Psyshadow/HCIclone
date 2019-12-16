@@ -127,7 +127,9 @@ The study has been conducted on 9 participants. Three different approaches have 
 The User Study Report where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf).
 
 ## Final solution
-    TODO
+Before we describe our final solution in a blog entry, we proudly present our final video presenting the outcome of the last 13 Weeks.
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=00AT5h_sOQM)
+
 Describe your final solution to the problem and the prototype you developed in more detail here.
 Upload your video to the "deliverables" folder and include the link here. 
 
