@@ -31,8 +31,8 @@ Optional: in this part you can document ideation and prototyping process (e.g. d
 ### Affinity clustering
 During the exercise session from **03/10/2019**, the information received during the stakeholder interview in the morning of the same day has been recapped. 
 The team members wrote down one term or a short phrase on sticky notes. 
-<p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://raw.githubusercontent.com/eth-ait/hci-project-group9/master/img/affinitycluster.jpeg?token=ANJ7NDMJAP43IZMF6YG5XDK5XMG6Y">         
+p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/affinitycluster.jpeg?raw=true">         
 </p>
 
 By placing the sticky notes on the table the task has been divided into clusters and the problem has been reframed. The reframing of the problem leads to a guided solution search and a meaning of need-finding data is made.
