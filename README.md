@@ -127,8 +127,8 @@ The study has been conducted on 9 participants. Three different approaches have 
 The User Study Report where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf).
 
 ## Final solution
-Before we describe our final solution in a blog entry, we proudly present our final video presenting the outcome of the last 13 Weeks.
-[here](https://drive.google.com/drive/folders/1K-X7mpmycW56nIgqzolgWIhegtWqE4EE).
+Before we describe our final solution in a blog entry, we proudly present our final vide.
+[here](https://drive.google.com/file/d/1UHa1WyOhLdzBhN5xIZjXnjPgU2GgIefc/view?usp=drive_open).
 
 
 
