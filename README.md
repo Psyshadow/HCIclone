@@ -118,16 +118,20 @@ Since the time in the exercise session was not enough the team decided that all 
 ### User Study
 To understand the needs of the users, how intuitively the website design is and if all the features are necessary, a user study has been set up.
 
-#### Content
-In the user study, the following three topics have been examined:
-##### Landing Page:
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/userstudy1.jpg?raw=true"> 
 </p>
+
+#### Content
+In the user study, the following three topics have been examined:
+
+##### Landing Page:
 The landing page is the first page presented after logging into the platform. It should show an overview and lead to different features. One feature that was wished to be showed on the landing page by the stakeholders, for example, was the progress (project- and module completion-wise).
 In the user study different ideas are tested on intuitivity and understanding. The question on how efficient the user is able to perform certain tasks on the UI has to be answered.
+
 ##### Interest Check:
 One goal of the learning platform is to break free from academic boundaries and explore the content in a playful manner. Therefore, one feature of the platform is to suggest modules which the user is particularly interested in and encourage the user to study proposed modules. For that reason, three different low fidelity prototypes have been created to select the topics a user is interested in. These prototypes will be evaluated for their usability.
+
 ##### Communication Platform:
 One stakeholder requirement states to have as much peer to peer interaction as possible. This is due to the fact that they want to create a community that is helping each other out and sharing their experiences as well as gaining networking experience. The interviews with potential users (i.e. successful and failed startup founders) also showed that a common need is to create or have access to a social business network.
 
@@ -195,7 +199,7 @@ The Landing page shows the main overview of the learning platform and should be 
 - The design of the courses has been done based on the restrictions given by learndash and the stakeholder.
 
 #### Interest check
-<p align="left" width="70%">
+<p align="left" width="60%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/interest-check.JPG?raw=true"> 
 </p>
 
