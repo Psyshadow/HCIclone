@@ -134,11 +134,11 @@ Before we describe our final solution in a blog entry, we proudly present our fi
 ### The prototype we developed
 
 <p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/final-landingpage.JPG?raw=true">         
 </p>
 
 <p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/group.jpeg?raw=true">         
 </p>
 
 Describe your final solution to the problem and the prototype you developed in more detail here.
