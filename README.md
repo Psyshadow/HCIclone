@@ -31,7 +31,8 @@ Optional: in this part you can document ideation and prototyping process (e.g. d
 ### Affinity clustering
 During the exercise session from **03/10/2019**, the information received during the stakeholder interview in the morning of the same day has been recapped. 
 The team members wrote down one term or a short phrase on sticky notes. 
-p align="left" width="100%">
+
+<p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/affinitycluster.jpeg?raw=true">         
 </p>
 
@@ -130,7 +131,15 @@ The User Study Report where the methods and results of the user study are discus
 Before we describe our final solution in a blog entry, we proudly present our final video.
 [here](https://drive.google.com/file/d/1ZdpHfX0r0U_8gLQ11UY3akuBWJRPDVYe/view).
 
+### The prototype we developed
 
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
+</p>
+
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
+</p>
 
 Describe your final solution to the problem and the prototype you developed in more detail here.
 Upload your video to the "deliverables" folder and include the link here. 
