@@ -143,27 +143,66 @@ However, many users have not used a communication tool for their project due to 
 **The full User Study Report where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf). [PDF, 16 Pages]**
 
 ## Final solution
-Before we describe our final solution, we proudly present our final video[here](https://drive.google.com/file/d/1ZdpHfX0r0U_8gLQ11UY3akuBWJRPDVYe/view).
+Before we describe our final solution, we proudly present our final video [here](https://drive.google.com/file/d/1ZdpHfX0r0U_8gLQ11UY3akuBWJRPDVYe/view).
 
 ### The prototype we developed
 With the knowledge the team gained through the user study, a new prototype has been created. This one would be the final prototype and was therefore designed as a high fidelity prototype on Adobe Xd. Hereinafter, the different features of the prototype will be shown and explained.
 
 The Landing page shows the main overview of the learning platform and should be as intuitive as possible. After the evaluation of the user study and the meeting with the stakeholders, a few changes have been made and the final prototype has been designed. 
 
+#### Landing Page
 <p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/Landing Page.png?raw=true">         
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/Landing Page.png?raw=true"> 
 </p>
 
+- Rename “skills” to “skill progress” to adjust to the meaning of progress bars.
+- Use progress bar instead of spider diagram for main quest phases.
+- Course overview bigger: compared to the landing page of the paper-prototype the course section on the landing page of the final prototype takes in more space based on the feedback of the stakeholder. 
+- From two buttons (my courses and all modules) to one button: instead of distinguishing, only one button (edit courses) has been implemented. This removes the confusion about the difference of courses and modules.
+- Decision on using already existing communication platform (based on the outcome of the questionnaire in the user study and the last meeting with the stakeholder).
+- The state of the phase can be changed.
 
-<p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
+#### Mentor contact
+<p align="left" width="70%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/mentor.JPG?raw=true"> 
 </p>
 
-<p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
+- The mentor button shows all the different ways a mentor agreed to be contacted by and the participant can choose which one to use.
+
+#### Challenges and Leaderboard
+<p align="left" width="50%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/challenges.JPG?raw=true"> 
 </p>
 
-Describe your final solution to the problem and the prototype you developed in more detail here.
-Upload your video to the "deliverables" folder and include the link here. 
+- Leaderboard: By clicking on the crown button upcoming challenges are shown as well as a leaderboard where the participant can see how much he studied compared to the other participants of the EWOR program. 
+- Adapted challenges: The challenges can be used to have an overview of the personal progress of the participant, e.g. completed phases or completed courses.
 
-(Weeks 10-14)
+#### Course selection
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/course_overview.JPG?raw=true"> 
+</p>
+
+- Courses can be filtered according to the phases of the project, as well as “my courses” and also “mentor suggested courses”.
+
+#### Course design
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/course.png?raw=true"> 
+</p>
+
+- The design of the courses has been done based on the restrictions given by learndash and the stakeholder.
+
+#### Interest check
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/interest-check.JPG?raw=true"> 
+</p>
+
+- Interest check: based on the outcome of the user study the bubble prototype has been improved and implemented on wordpress. The user can now do the interest check and get courses suggested based on his interests.
+
+### Final Presentation
+At the final presentation of the project, all delivered videos have been shown. Then the visitors of the presentation could come by and test the prototypes and see the work that has been done during the last semester.
+
+<p align="left" width="100%">
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/group.jpeg?raw=true"> 
+</p>
+With this group picture, we finish our blog about our journey of designing the EWOR - learning platform. 
+
