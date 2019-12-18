@@ -36,12 +36,7 @@ further administration has its separate tools to manage the platform:
 - Detailed Reporting
 
 These features provide the core functionality of the EWOR platform. The concepts created in this project go beyond the possibilities of what learndash offers.
-The biggest addition to the learndash features would be to create a system which keeps track of the following special types of modules:
-- Suggested modules based on the interest check
-- Modules suggested by the mentor
-
-These modules must be queried and presented to the user.
-   
+The next section gives an overview of the features needed to realize the prototype.
 
 ## Project Features
 Various features have been prototyped and developed during this course. For the development and evaluation process mainly low fidelity prototypes have been used such as mocked paper prototypes with techniques such as the _the wizard of oz_. Once these features are on a certain level of satisfaction they are to be implemented into the learndash/wordpress framework. The following section gives insight about the implementation details.
@@ -58,10 +53,17 @@ The landing page requires access to the following data:
 - Scoreboard
 - Upcoming events
 
-The already started modules, other available modules and the corresponding progress should be retrievable from learndash by querying the database. The suggestions must be made available by the addon by saving them data to a database.
+The already started modules, other available modules and the corresponding progress should be retrievable from learndash respectively its databases. The suggestions must be made available by the extension.
+
+The biggest addition to the learndash functionality for the landing page would be to create a system which keeps track of the following special types of modules:
+- Suggested modules based on the interest check
+- Modules suggested by the mentor
+- Relate a mentor to a project/person
 
 ### Mentor interaction
-The mentor must be able to suggest modules. This can be realized by the mentioned learndash addon. To what extent the learndash administrator user is suited for this interaction is still to be investigated since detailed reports might prove useful for mentors.
+The mentor must be able to suggest modules. This can also be realized by extending learndash. To what extent the already existing learndash _administrator_ user is suited for this interaction is still to be investigated since detailed reports might prove useful for mentors.
+
+Further the mentor is also assigned to a project/person. This assignment is done by the EWOR program but the relation to the mentor must be available in wordpress to show his/her information and let the mentor interact with the platform.
 
 ### Leaderboard
 Learndash implements a leaderboard for their quizzes. Everything which goes beyond quizzes must be again implemented in an extension even though the modules point can be taken from learndash. The leaderboard can be delayed since this feature is not a core utility but rather an addition to the user experience.
@@ -79,5 +81,15 @@ A database table holds the entries for this selection and allows other component
 The survey on communication tool has yielded interesting results. Many participants have already experienced that such a tool has not been used due to it being obsolete. While a forum or slack link can easily be provided a more sophisticated communication tool which could potentially create more helpful interaction on the platform directly would involve more implementation effort.
 
 The level of sophistication which is very likely needed to provide a useful communication tool on the platform also calls for a flexible system and encourages to create an extensive addon for the learndash system.
+Again, this feature does not provide a core component and can be substituted with an already existing communication tool such as the flexible messenger [Slack](https://slack.com/intl/en-ch/).
 
-### 
+## Resume
+Wordpress and learndash provide a framework with a lot of features that are good to go. The available features are not flexibel enough to realize the prototype created in the _Human Computer Interaction_ course and must be extended by a custom learndash addon. The following functionality must be provided by the extension:
+* Get mentor information
+* Let the mentor suggest modules
+* Provide an interest check
+* Suggest modules based on the interest check
+* (Provide a scoring system / echievements)
+* (Provide a communication tool)
+
+The theme and design should be implemented as a wordpress custom theme which allows to style all the contents (also the extra functionality from the extension) to yield a consistent and flexible design.
