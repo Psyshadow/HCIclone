@@ -143,14 +143,17 @@ However, many users have not used a communication tool for their project due to 
 **The full User Study Report where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf). [PDF, 16 Pages]**
 
 ## Final solution
-Before we describe our final solution in a blog entry, we proudly present our final video.
-[here](https://drive.google.com/file/d/1ZdpHfX0r0U_8gLQ11UY3akuBWJRPDVYe/view).
+Before we describe our final solution, we proudly present our final video[here](https://drive.google.com/file/d/1ZdpHfX0r0U_8gLQ11UY3akuBWJRPDVYe/view).
 
 ### The prototype we developed
+With the knowledge the team gained through the user study, a new prototype has been created. This one would be the final prototype and was therefore designed as a high fidelity prototype on Adobe Xd. Hereinafter, the different features of the prototype will be shown and explained.
+
+The Landing page shows the main overview of the learning platform and should be as intuitive as possible. After the evaluation of the user study and the meeting with the stakeholders, a few changes have been made and the final prototype has been designed. 
 
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/Landing Page.png?raw=true">         
 </p>
+
 
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
