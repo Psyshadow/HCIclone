@@ -119,7 +119,7 @@ Since the time in the exercise session was not enough the team decided that all 
 To understand the needs of the users, how intuitively the website design is and if all the features are necessary, a user study has been set up.
 
 <p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/userstudy1.jpg?raw=true"> 
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/userstudy2.jpeg?raw=true"> 
 </p>
 
 #### Content
