@@ -118,14 +118,29 @@ Since the time in the exercise session was not enough the team decided that all 
 ### User Study
 To understand the needs of the users, how intuitively the website design is and if all the features are necessary, a user study has been set up.
 
-In the user study the following three topics have been examined:
-- Landing Page
-- Interest Check
-- Communication Platform
+#### Content
+In the user study, the following three topics have been examined:
+##### Landing Page:
+The landing page is the first page presented after logging into the platform. It should show an overview and lead to different features. One feature that was wished to be showed on the landing page by the stakeholders, for example, was the progress (project- and module completion-wise).
+In the user study different ideas are tested on intuitivity and understanding. The question on how efficient the user is able to perform certain tasks on the UI has to be answered.
+##### Interest Check:
+One goal of the learning platform is to break free from academic boundaries and explore the content in a playful manner. Therefore, one feature of the platform is to suggest modules which the user is particularly interested in and encourage the user to study proposed modules. For that reason, three different low fidelity prototypes have been created to select the topics a user is interested in. These prototypes will be evaluated for their usability.
+##### Communication Platform:
+One stakeholder requirement states to have as much peer to peer interaction as possible. This is due to the fact that they want to create a community that is helping each other out and sharing their experiences as well as gaining networking experience. The interviews with potential users (i.e. successful and failed startup founders) also showed that a common need is to create or have access to a social business network.
 
-The study has been conducted on 9 participants. Three different approaches have been chosen to gather insights on the three main topics to be investigated.
+#### Results
+##### Landing Page
+We gained the understanding that the “Skills” section was not clear enough and that a spider-diagram to display the learning progress is not intuitive. In this case one can that where the progress of the side quest studying is displayed with a bar, it is understood better. These conclusions are also supported by the evaluation of the timing data and the results of the landing page survey.
+The course and module section was well understood and the participants were able to edit their courses and find courses they were asked to find. We also gained an understanding of the need for a challenge feature.
 
-The User Study Report where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf).
+##### Interest Check
+The interest check evaluation yielded a clear winner out of three interactive prototypes. Evaluating the different interest check prototypes with the SUS method was appropriate since it also focuses on repeated tasks which will be the case with the intended functionality of being able to adjust one’s interests at any point on the platform. Therefore the process should be efficient and completion times should be low. Further subjective questions were asked to get a feeling for the satisfaction of each prototype. The best SUS score and overall individual subjective rating has been proven to be the bubble selection approach. The completion times were the shortest on this prototype as well, which further endorses the choice.
+
+##### Communication Tool
+The survey on the communication tool and the participants’ experiences gave insight to high level needs and requirements to said feature. Even though no specific prototype has been evaluated important insights could be extracted from the survey. It could be of great importance to tackle some user needs identified in the initial need finding process (i.e. contact to mentor, networking) which has been conducted with potential users of the platform.
+However, many users have not used a communication tool for their project due to already existing alternatives (such as slack/whatsapp etc.) in the past. Therefore, a sophisticated integration to the platform and its tools might prove beneficial.
+
+**The full User Study Report where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf). [PDF, 16 Pages]**
 
 ## Final solution
 Before we describe our final solution in a blog entry, we proudly present our final video.
@@ -134,11 +149,14 @@ Before we describe our final solution in a blog entry, we proudly present our fi
 ### The prototype we developed
 
 <p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/final-landingpage.JPG?raw=true">         
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
 </p>
-
-
 
 <p align="left" width="100%">
-  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/group.jpeg?raw=true">         
+  <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
 </p>
+
+Describe your final solution to the problem and the prototype you developed in more detail here.
+Upload your video to the "deliverables" folder and include the link here. 
+
+(Weeks 10-14)
