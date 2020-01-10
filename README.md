@@ -211,4 +211,7 @@ At the final presentation of the project, all delivered videos have been shown. 
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/group.jpeg?raw=true"> 
 </p>
-With this group picture, we finish our blog about our journey of designing the EWOR - learning platform. 
+With this group picture, we finish our blog about our journey of designing the EWOR - learning platform.
+
+### Roadmap
+Since the project is finished in a working state we provide a [roadmap](https://github.com/eth-ait/hci-project-group9/blob/master/ROADMAP.md) which summarizes the implementation details for built and also upcoming features. The roadmap should help EWOR to continue this project on the basis of our work and provide thoughts and discussions of used tools.
