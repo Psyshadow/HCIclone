@@ -3,15 +3,14 @@
 
 ## Project description and customer-needs
 ### Company Profile
-- Best summarized as “a networking company”
 - EWOR is an existing business that connects large corporations and entrepreneurs. It furthermore offers an own ecosystem that grants access to investors, founders, peers and most recently education. The education platform is not yet ready and expected to launch in 2020. It slightly changes EWOR’s target customer as described in the below material.
-- Employ people to help them find a company => Provide community, office space, Investor Network, “employment opportunity” if start-up fails.
+- EWOR wants to offer a substitution to a "classical" master of business administration (MBA).
 - Companies can invest in start-ups at EWOR (call options)
 - They can also have an “innovation office” at EWOR ⇔ outsourcing risk
 
 ### Education Platform - Motivation
-The goal of EWOR is to offer an alternative way to "learn" entrepreneurship by "learning by doing" instead of studying it in theory.
-To provide their participants with the needed knowledge they want to create an education platform. This platform should be additional to the working experience and contain information about topics that the participants need in their training.
+The goal of EWOR is to offer an alternative way to "learn" entrepreneurship by  a "learning by doing" approach instead of studying it in theory at an university.
+To provide their participants with the needed knowledge they want to create an education platform. This platform should be additional to the working experience and contain information about topics that the participants need in their training which they can access on demand. The use of the learning platform is not mandatory for the participants.
 
 ### Project Description
 The goal is to gain a deeper understanding of customer-needs and translate them into a prototype that works within the restrictions of learndash.com used to build the education platform. The focus of this project is to understand customer-needs and iterate different UI/UX to appeal to customers.
@@ -22,7 +21,7 @@ The goal is to gain a deeper understanding of customer-needs and translate them 
 </p>
 
 ## Ideas
-Start with the key requirements/needs of the users / the company
+Start with the key requirements/ needs of the users/ the company
 Then list your initial ideas (min. 3) with a brief description.
 Upload the PPT presentation that you discussed with the stakeholder to the "deliverables" folder and include the link here. 
 
@@ -113,7 +112,7 @@ Describe your approach for evaluating your low-fi prototypes, present your resul
 Optional: in this part you can also document the prototyping process: show different iterations, as well as failed ideas (Weeks 6-10)
 ### Low-fi Prototypes
 The task of the exercise session **24/10/2019** was to do prototyping. Prototyping helps to narrow down and test ideas. In a first phase, we only did low-fi, paper prototypes since this helps to boost discussions and since the prototypes are only made out of paper it is more likely to throw an idea away and it is cost-and-time-effective. 
-Since the time in the exercise session was not enough the team decided that all team members continue doing paper prototypes at home, these prototypes will then be discussed during the team meeting of the **29/10/2019**.
+Since the time in the exercise session was not enough the team decided that all team members continue doing paper prototypes at home, these prototypes will then be discussed during the team meeting of the **29/10/2019**. The prototypes for the different interest checks where then built with the help of PowerPoint but still kept loo-fi.
 
 ### User Study
 To understand the needs of the users, how intuitively the website design is and if all the features are necessary, a user study has been set up.
