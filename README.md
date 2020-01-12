@@ -147,7 +147,7 @@ The interest check evaluation yielded a clear winner out of three interactive pr
 The survey on the communication tool and the participants’ experiences gave insight to high level needs and requirements to said feature. Even though no specific prototype has been evaluated important insights could be extracted from the survey. It could be of great importance to tackle some user needs identified in the initial need finding process (i.e. contact to mentor, networking) which has been conducted with potential users of the platform.
 However, many users have not used a communication tool for their project due to already existing alternatives (such as slack/whatsapp etc.) in the past. Therefore, a sophisticated integration to the platform and its tools might prove beneficial.
 
-**The full User Study Report where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf). [PDF, 16 Pages]**
+**The full User Study Report and the presentation where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf). [PDF, 16 Pages]; [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/User%20Study%20Presentation.pptx).[PPTX])**
 
 ## Final solution
 Before we describe our final solution, we proudly present our final video [here](https://drive.google.com/file/d/1ZdpHfX0r0U_8gLQ11UY3akuBWJRPDVYe/view).
