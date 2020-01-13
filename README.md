@@ -64,10 +64,10 @@ Platform Needs:
 
 ### Ideation Process
 The goal of the exercise session from **10/10/2019** was to hold a brainstorming session to collect ideas and various solution possibilities for the task at hand. These were then categorized into groups of subtasks, for example:
-- Platform Selection
-- Onboarding Experience and Content Structure
-- Progress and Reward Tracking
-- Content Type (e.g. Videos vs Text, etc.)
+- Platform selection
+- Onboarding experience and content structure
+- Progress and reward tracking
+- Content type (e.g. videos vs. text)
 
 The complete list of possible feature and structure ideas can be found [here](https://docs.google.com/document/d/1_WuViY7FWu7IQ8LbECBP9XhBpRHZoaEtJjYyjS29tew/edit?usp=sharing) and in the image below.
 
@@ -84,7 +84,7 @@ The user-needs identified in the start-up interview and the features presented w
 In the slides presented to the stakeholders (which can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Idea_Presentation_stakeholders.pptx)) the different possibilities to implement the features can be seen.
 
 On the following picture, one example of the presented features is shown.
-Coming from the user-needs "missing basic knowledge (keywords)" and "content according to phase", we came up with the idea that somehow the current stage and interests of the platform-user can be discovered and like this, the user then receives suggestions to learn.
+With the user-needs "missing basic knowledge (keywords)" and "content according to phase" in mind, we came up with the idea that somehow the current stage and interests of the platform-user can be determined and according to these findings the user receives module suggestions for learning.
 
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
