@@ -66,7 +66,7 @@ The mentor must be able to suggest modules. This can also be realized by extendi
 Further the mentor is also assigned to a project/person. This assignment is done by the EWOR program but the relation to the mentor must be available in wordpress to show his/her information and let the mentor interact with the platform.
 
 ### Leaderboard
-Learndash implements a leaderboard for their quizzes. Everything which goes beyond quizzes must be again implemented in an extension even though the modules point can be taken from learndash. The leaderboard can be delayed since this feature is not a core utility but rather an addition to the user experience.
+Learndash implements a leaderboard for their quizzes. Everything which goes beyond quizzes must be again implemented in an extension even though the module points can be taken from learndash. The leaderboard can be delayed since this feature is not a core utility but rather an addition to the user experience.
 
 ### Bubble Selection
 The module content should be structured and presented in a way that participants are encouraged to discover the content and have a rather playful way to interact in contrast to the univerities' formal approach. Therefore to present the user with topics which he/she is particularly interested in an interest check lets the user make selection of the preferred topics. The content is then suggested according to this selection to encourage the user to complete modules.
@@ -78,13 +78,13 @@ The plugin creates a [D3.js](https://d3js.org/) force graph which not only looks
 A database table holds the entries for this selection and allows other components to propose modules or highlight them. This standalone plugin could also be integrated in a more extensive addon for learndash.
 
 ### Communication Tool
-The survey on communication tool has yielded interesting results. Many participants have already experienced that such a tool has not been used due to it being obsolete. While a forum or slack link can easily be provided a more sophisticated communication tool which could potentially create more helpful interaction on the platform directly would involve more implementation effort.
+The survey on communication tools has yielded interesting results. Many participants have already experienced that such a tool has not been used due to it being obsolete. While a forum or slack link can easily be provided a more sophisticated communication tool which could potentially create more helpful interaction on the platform directly would involve more implementation effort.
 
 The level of sophistication which is very likely needed to provide a useful communication tool on the platform also calls for a flexible system and encourages to create an extensive addon for the learndash system.
-Again, this feature does not provide a core component and can be substituted with an already existing communication tool such as the flexible messenger [Slack](https://slack.com/intl/en-ch/).
+Again, this feature does not provide a core component and can be substituted with an already existing communication tool as for example the flexible messenger [Slack](https://slack.com/intl/en-ch/).
 
 ## Resume
-Wordpress and learndash provide a framework with a lot of features that are good to go. The available features are not flexibel enough to realize the prototype created in the _Human Computer Interaction_ course and must be extended by a custom learndash addon. The following functionality must be provided by the extension:
+Wordpress and learndash provide a framework with a lot of features that are good to go. Nevertheless, the available features are not flexibel enough to realize the prototype created in the _Human Computer Interaction_ course and have to be extended by a custom learndash addon. The following functionality must be provided by the extension:
 * Get mentor information
 * Let the mentor suggest modules
 * Provide an interest check
