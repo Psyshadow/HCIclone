@@ -30,7 +30,7 @@ A second approach to a custom theme is to use a drag and drop theme builder. In 
 - Quizzes
 - Group management
 
-further administration has its separate tools to manage the platform:
+Further administration has its separate tools to manage the platform:
 - User profiles
 - Group management
 - Detailed Reporting
@@ -42,7 +42,7 @@ The next section gives an overview of the features needed to realize the prototy
 Various features have been prototyped and developed during this course. For the development and evaluation process mainly low fidelity prototypes have been used such as mocked paper prototypes with techniques such as the _the wizard of oz_. Once these features are on a certain level of satisfaction they are to be implemented into the learndash/wordpress framework. The following section gives insight about the implementation details.
 
 ### Landing Page
-The landing page is the first page presented to the user after logging into the platform. Therefore this page must provide an overview of the project such as the learning progress. The detailed derivation of the landing page and its evaluation can be found in the user studies.
+The landing page is the first page presented to the user after logging into the platform. Therefore this page must provide an overview of the project such as the learning progress. The detailed derivation of the landing page and its evaluation can be found in the user study report and [here](https://github.com/eth-ait/hci-project-group9).
 
 The landing page requires access to the following data:
 - Project progress
