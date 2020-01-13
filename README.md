@@ -21,15 +21,9 @@ The goal is to gain a deeper understanding of customer-needs and translate them 
 </p>
 
 ## Ideas
-Start with the key requirements/ needs of the users/ the company
-Then list your initial ideas (min. 3) with a brief description.
-Upload the PPT presentation that you discussed with the stakeholder to the "deliverables" folder and include the link here. 
-
-Optional: in this part you can document ideation and prototyping process (e.g. describe personas, show affinity clusters, etc. ) (Weeks 3-6)
-
 ### Affinity clustering
 During the exercise session from **03/10/2019**, the information received during the stakeholder interview in the morning of the same day has been recapped. 
-The team members wrote down one term or a short phrase on sticky notes. 
+The team members wrote down a term or a short phrase on sticky notes. 
 
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/affinitycluster.jpeg?raw=true">         
@@ -37,7 +31,7 @@ The team members wrote down one term or a short phrase on sticky notes.
 
 By placing the sticky notes on the table the task has been divided into clusters and the problem has been reframed. The reframing of the problem leads to a guided solution search and a meaning of need-finding data is made.
 
-As a learning from the exercise session and the affinity clustering we took, that the project task can be clustered as followed:
+As a result from the exercise session and the affinity clustering, the project task could be clustered as followed:
 - Stakeholder vision 
 - Platform User
 - Content
@@ -48,17 +42,17 @@ As a learning from the exercise session and the affinity clustering we took, tha
 This clustering was helpful to further understand the projects goals and important framework.
 
 ### User-Needs
-To gain an understanding of the user-needs all team members contacted start-ups. The start-up creators have been interview to gain knowledge on what they would have expected if they would have had access to such a learning platform. 
+To gain an understanding of the user-needs all team members contacted start-ups. The start-up creators were interviewed to gain knowledge on what they would have expected if they would have had access to such a learning platform. 
 
-The user-needs are extracted from the common needs of the interviews conducted with start-ups and pose the requirements for our platform:
+The user-needs have been extracted from the common needs of the interviews conducted with start-ups and pose the requirements for our platform:
 
 General Needs:
 - Mentoring
 - Networking
 
 Missing knowledge:
-- Business creation (Legal, Employees, Insurances, business plan)
-- Basic knowledge (keywords)
+- Business creation (legal, employees, insurances, business plan)
+- Basic knowledge (keywords, technical terms)
 
 Platform Needs:
 - Browser (PC)
@@ -69,7 +63,7 @@ Platform Needs:
 - Questions to check knowledge
 
 ### Ideation Process
-The goal of the exercise session from **10/10/2019** was to hold a brainstorming session for collecting the ideas and various solution possibilities for the task at hand. These were then categorized into groups for all the subtasks, such as:
+The goal of the exercise session from **10/10/2019** was to hold a brainstorming session to collect ideas and various solution possibilities for the task at hand. These were then categorized into groups of subtasks, for example:
 - Platform Selection
 - Onboarding Experience and Content Structure
 - Progress and Reward Tracking
@@ -86,11 +80,11 @@ Further tasks added include additional research into possible platforms, concept
 
 ### Idea Presentation
 As an outcome of the ideation process and the user-needs, possible features for the learning platform were presented to the stakeholders. This project differs a bit from the other ones in the sense that the stakeholders themselves are still figuring out how the learning platform should look like contentwise.
-The user-need identified in the start-up interview and the features presented were also helpful for the stakeholders to take further decisions.
-In the slides presented to the stakeholders (that can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Idea_Presentation_stakeholders.pptx)) the different possible ways to implement the features can be seen.
+The user-needs identified in the start-up interview and the features presented were also helpful for the stakeholders to take further decisions.
+In the slides presented to the stakeholders (which can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Idea_Presentation_stakeholders.pptx)) the different possibilities to implement the features can be seen.
 
-On the following picture, one example of the presented features can be seen.
-Out of the user-need, missing basic knowledge (keywords) and content according to phase, we came up with the idea that somehow the current stage and interests of the platform-user can be discovered and like this, the user then receives suggestions to learn.
+On the following picture, one example of the presented features is shown.
+Coming from the user-needs "missing basic knowledge (keywords)" and "content according to phase", we came up with the idea that somehow the current stage and interests of the platform-user can be discovered and like this, the user then receives suggestions to learn.
 
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/idea_presentation_image_blog.JPG?raw=true">         
