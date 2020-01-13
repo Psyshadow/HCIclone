@@ -91,7 +91,7 @@ With the user-needs "missing basic knowledge (keywords)" and "content according 
 </p>
 
 
-By presenting and discussing our insights and ideas during the call with our stakeholders, following new insights into the stakeholder-needs and their opinion about our ideas could be gained:
+By presenting and discussing our insights and ideas in the call with our stakeholders, following new insights into the stakeholder-needs and their opinion about our ideas could be gained:
 
 - Mentor has login for the platform as well
 - Community should be present! Some kind of communication tool is wanted.
@@ -126,8 +126,10 @@ One goal of the learning platform is to break free from academic boundaries and 
 One stakeholder requirement states to have as much peer to peer interaction as possible. This is due to the fact that they want to create a community that is helping each other out and sharing their experiences as well as gaining networking experience. The interviews with potential users (i.e. successful and failed startup founders) also showed that a common need is to create or have access to a social business network.
 
 #### Results
+In this section a short description of some findings of the user study is found. **The full User Study Report and the presentation where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf). [PDF, 16 Pages]; [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/User%20Study%20Presentation.pptx).[PPTX])**
+
 ##### Landing Page
-We gained the understanding that the “Skills” section was not clear enough and that a spider-diagram to display the learning progress is not intuitive. In this case one can that where the progress of the side quest studying is displayed with a bar, it is understood better. These conclusions are also supported by the evaluation of the timing data and the results of the landing page survey.
+We gained the understanding that the “Skills” section was not clear enough and that a spider-diagram to display the learning progress is not intuitive. The progress of the side quest studying is displayed with a bar, which was definately understood better. These conclusions are also supported by the evaluation of the timing data and the results of the landing page survey.
 The course and module section was well understood and the participants were able to edit their courses and find courses they were asked to find. We also gained an understanding of the need for a challenge feature.
 
 ##### Interest Check
@@ -135,15 +137,14 @@ The interest check evaluation yielded a clear winner out of three interactive pr
 
 ##### Communication Tool
 The survey on the communication tool and the participants’ experiences gave insight to high level needs and requirements to said feature. Even though no specific prototype has been evaluated important insights could be extracted from the survey. It could be of great importance to tackle some user needs identified in the initial need finding process (i.e. contact to mentor, networking) which has been conducted with potential users of the platform.
-However, many users have not used a communication tool for their project due to already existing alternatives (such as slack/whatsapp etc.) in the past. Therefore, a sophisticated integration to the platform and its tools might prove beneficial.
+However, many users have not used a communication tool for their project due to already existing alternatives (e.g. slack, whatsapp, etc.) in the past. Therefore, a sophisticated integration to the platform and its tools might prove beneficial.
 
-**The full User Study Report and the presentation where the methods and results of the user study are discussed in detail can be seen [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/UserStudyReport-EWOR.pdf). [PDF, 16 Pages]; [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/User%20Study%20Presentation.pptx).[PPTX])**
 
 ## Final solution
 Before we describe our final solution, we proudly present our final video [here](https://drive.google.com/file/d/1ZdpHfX0r0U_8gLQ11UY3akuBWJRPDVYe/view).
 
 ### The prototype we developed
-With the knowledge the team gained through the user study, a new prototype has been created. This one would be the final prototype and was therefore designed as a high fidelity prototype on Adobe Xd. Hereinafter, the different features of the prototype will be shown and explained.
+With the knowledge the team gained through the user study, a new prototype has been created. This one would be the final prototype and was therefore designed as a high fidelity prototype on Adobe XD. Hereinafter, the different features of the prototype will be shown and explained.
 
 The Landing page shows the main overview of the learning platform and should be as intuitive as possible. After the evaluation of the user study and the meeting with the stakeholders, a few changes have been made and the final prototype has been designed. 
 
@@ -155,7 +156,7 @@ The Landing page shows the main overview of the learning platform and should be 
 - Rename “skills” to “skill progress” to adjust to the meaning of progress bars.
 - Use progress bar instead of spider diagram for main quest phases.
 - Course overview bigger: compared to the landing page of the paper-prototype the course section on the landing page of the final prototype takes in more space based on the feedback of the stakeholder. 
-- From two buttons (my courses and all modules) to one button: instead of distinguishing, only one button (edit courses) has been implemented. This removes the confusion about the difference of courses and modules.
+- From two buttons (my courses and all modules) to one button: instead of distinguishing, only one button (edit courses) has been implemented. This removes the confusion about the difference of courses and modules (there is none).
 - Decision on using already existing communication platform (based on the outcome of the questionnaire in the user study and the last meeting with the stakeholder).
 - The state of the phase can be changed.
 
@@ -164,14 +165,14 @@ The Landing page shows the main overview of the learning platform and should be 
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/mentor.JPG?raw=true"> 
 </p>
 
-- The mentor button shows all the different ways a mentor agreed to be contacted by and the participant can choose which one to use.
+- The mentor button shows all the different ways a mentor agreed to be contacted by and the participant can choose which one to use. This gives them (both mentor and participant) the freedom to choose the way of interaction themselves.
 
 #### Challenges and Leaderboard
 <p align="left" width="80%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/challenges.JPG?raw=true"> 
 </p>
 
-- Leaderboard: By clicking on the crown button upcoming challenges are shown as well as a leaderboard where the participant can see how much he studied compared to the other participants of the EWOR program. 
+- Leaderboard: By clicking on the crown button upcoming challenges are shown as well as a leaderboard where the participants can see how much they studied compared to the other participants of the EWOR program. 
 - Adapted challenges: The challenges can be used to have an overview of the personal progress of the participant, e.g. completed phases or completed courses.
 
 #### Course selection
@@ -193,7 +194,10 @@ The Landing page shows the main overview of the learning platform and should be 
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/interest-check.JPG?raw=true"> 
 </p>
 
-- Interest check: based on the outcome of the user study the bubble prototype has been improved and implemented on wordpress. The user can now do the interest check and get courses suggested based on his interests.
+- Interest check: based on the outcome of the user study, the bubble prototype has been improved and implemented on wordpress. The user can now do the interest check and get courses suggested based on his interests.
+
+### Roadmap
+Since the project is finished in a working state we provide a [roadmap](https://github.com/eth-ait/hci-project-group9/blob/master/ROADMAP.md) which summarizes the implementation details for built and also upcoming features. The roadmap should help EWOR to continue this project on the basis of our work and provide thoughts and discussions of used tools.
 
 ### Final Presentation
 At the final presentation of the project, all delivered videos have been shown. Then the visitors of the presentation could come by and test the prototypes and see the work that has been done during the last semester.
@@ -201,7 +205,4 @@ At the final presentation of the project, all delivered videos have been shown. 
 <p align="left" width="100%">
   <img style="width:30%;align:left" src="https://github.com/eth-ait/hci-project-group9/blob/master/img/group.jpeg?raw=true"> 
 </p>
-With this group picture, we finish our blog about our journey of designing the EWOR - learning platform.
-
-### Roadmap
-Since the project is finished in a working state we provide a [roadmap](https://github.com/eth-ait/hci-project-group9/blob/master/ROADMAP.md) which summarizes the implementation details for built and also upcoming features. The roadmap should help EWOR to continue this project on the basis of our work and provide thoughts and discussions of used tools.
+With this group picture, we finish the blog about our journey of designing the EWOR learning platform.
