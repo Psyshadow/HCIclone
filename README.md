@@ -3,15 +3,14 @@
 
 ## Project description and customer-needs
 ### Company Profile
-- EWOR means Entrepreneurship WithOut Risks
-- EWOR is an existing business that connects large corporations and entrepreneurs. It furthermore offers an own ecosystem that grants access to investors, founders, peers and most recently education.
-- EWOR wants to offer a substitution to a "classical" master of business administration (MBA). They would like to start a new programm in spring 2020 with an aditional learning platform. The participant will be a leader off a start-up or an innovation lab in collaboration with a business partner. The business partner will provide a task or an idea for the start-up/ innovation lab to realize.
+- EWOR (Entrepreneurship WithOut Risks) is an existing business that connects large corporations and entrepreneurs. It furthermore offers an own ecosystem that grants access to investors, founders, peers and most recently education.
+- EWOR wants to offer a substitution to a "classical" master of business administration (MBA). They would like to start a new programm in spring 2020 with an additional learning platform. The participants will be leaders of a start-up or an innovation lab in collaboration with a business partner. The business partner will provide a task or an idea for the start-up/innovation lab to realize.
 - Companies can invest in start-ups at EWOR (call options)
 - They can also have an “innovation office” at EWOR ⇔ outsourcing risk
 
 ### Education Platform - Motivation
 The goal of EWOR is to offer an alternative way to "learn" entrepreneurship by  a "learning by doing" approach instead of studying it in theory at an university.
-To provide their participants with the needed knowledge they want to create an education platform. This platform should be additional to the working experience and contain information about topics that the participants need in their training which they can access on demand. The use of the learning platform is not mandatory for the participants. The platform does not exist so we have to start from scratch and should diverse from university style.
+To provide their participants with the needed knowledge they want to create an education platform. This platform should be additional to the working experience and contain information about topics that the participants need in their training which they can access on demand. The use of the learning platform is not mandatory for the participants. The platform does not exist yet so we have to start from scratch and should diverse from university style (stakeholder need).
 
 ### Project Description
 The goal is to gain a deeper understanding of customer-needs and translate them into a prototype that works within the restrictions of learndash.com used to build the education platform. The focus of this project is to understand customer-needs and iterate different UI/UX to appeal to customers.
