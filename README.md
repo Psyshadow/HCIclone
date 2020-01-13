@@ -39,7 +39,7 @@ As a result from the exercise session and the affinity clustering, the project t
 - Platform Architecture 
 - Framework of EWOR
 
-This clustering was helpful to further understand the projects goals and important framework. Successively to the affinity clustering, we were able to create 3 different personas that described their user needs respectively. The full description of the personas is found [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Personas.pdf) [PDF, 3 Pages].
+This clustering was helpful to further understand the projects goals and important framework.Successively to the affinity clustering, we were able to create 3different personas that described their user needs respectively. [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Personas.pdf).[PDF, 3 Pages]
 
 ### User-Needs
 To gain an understanding of the user-needs all team members contacted start-ups. The start-up creators were interviewed to gain knowledge on what they would have expected if they would have had access to such a learning platform. 
@@ -91,7 +91,7 @@ With the user-needs "missing basic knowledge (keywords)" and "content according 
 </p>
 
 
-By presenting the stakeholders our insights and ideas, during the call, following new insights into the stakeholder's needs and their opinion about our ideas could be gained:
+By presenting and discussing our insights and ideas during the call with our stakeholders, following new insights into the stakeholder-needs and their opinion about our ideas could be gained:
 
 - Mentor has login for the platform as well
 - Community should be present! Some kind of communication tool is wanted.
@@ -99,14 +99,11 @@ By presenting the stakeholders our insights and ideas, during the call, followin
 - Different types of progress should be visible (start-up phase user is in, knowledge in a specific field, etc.)
 - Content projection is still in progress at EWOR itself. The suggested introduction video with additional reading material was welcomed.
    
-
+   
 ## Evaluation
-Describe your approach for evaluating your low-fi prototypes, present your results and your conclusion. Upload the document shared with the stakeholder to the "deliverables" folder and include the link here.
-
-Optional: in this part you can also document the prototyping process: show different iterations, as well as failed ideas (Weeks 6-10)
 ### Low-fi Prototypes
-The task of the exercise session **24/10/2019** was to do prototyping. Prototyping helps to narrow down and test ideas. In a first phase, we only did low-fi, paper prototypes since this helps to boost discussions and since the prototypes are only made out of paper it is more likely to throw an idea away and it is cost-and-time-effective. 
-Since the time in the exercise session was not enough the team decided that all team members continue doing paper prototypes at home, these prototypes will then be discussed during the team meeting of the **29/10/2019**. The prototypes for the different interest checks where then built with the help of PowerPoint but still kept loo-fi.
+The task of the exercise session **24/10/2019** was prototyping. Prototyping helps to narrow down and test ideas. In a first phase, we only did low-fi paper prototypes since it would help to boost discussions and as the prototypes were only made out of paper it was more likely to throw an idea away if needed. It is also cost-and-time-effective. 
+Since the time in the exercise session was not enough the team decided that all team members will continue doing paper prototypes at home. These prototypes will then be discussed during the team meeting of the **29/10/2019**. The prototypes for the different interest checks will be built with the help of PowerPoint but still kept low-fi.
 
 ### User Study
 To understand the needs of the users, how intuitively the website design is and if all the features are necessary, a user study has been set up.
