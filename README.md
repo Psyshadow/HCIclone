@@ -39,7 +39,7 @@ As a result from the exercise session and the affinity clustering, the project t
 - Platform Architecture 
 - Framework of EWOR
 
-This clustering was helpful to further understand the projects goals and important framework. Successively to the affinity clustering, we were able to create three different personas that described their user needs respectively. The full description of the personas can be found [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Personas.pdf).[PDF, 3 Pages]
+This clustering was helpful to further understand the projects goals and important framework. Successively to the affinity clustering, we were able to create three different personas that described their user needs respectively. The full description of the personas can be found [here](https://github.com/eth-ait/hci-project-group9/blob/master/Deliverables/Personas.pdf) [PDF, 3 Pages].
 
 ### User-Needs
 To gain an understanding of the user-needs all team members contacted start-ups. The start-up creators were interviewed to gain knowledge on what they would have expected if they would have had access to such a learning platform. 
