@@ -63,8 +63,6 @@ The biggest addition to the learndash functionality for the landing page would b
 - Relate a mentor to a project/person
 
 ## Mentor interaction
-TODO add user management and permissions
-
 The mentor must be able to suggest modules. This can also be realized by extending learndash. To what extent the already existing learndash _administrator_ user is suited for this interaction is still to be investigated since detailed reports might prove useful for mentors.
 
 Further the mentor is also assigned to a project/person. This assignment is done by the EWOR program but the relation to the mentor must be available in wordpress to show his/her information and let the mentor interact with the platform.
@@ -78,7 +76,7 @@ To create this selection various prototypes have been created and evaluated out 
 
 Since no viable addon/plugin for such a feature has been found in wordpress a custom _bubble selection_ wordpress plugin has been created to provide the wanted user interface and experience.
 
-The plugin creates a [D3.js](https://d3js.org/) force graph which not only looks and behaves attractive but also naturally creates a dense blob of bubbles and somewhat optimizes the used space of the screen.
+The [plugin](https://github.com/eth-ait/hci-project-group9/tree/master/wordpress_plugin/bubble-selector) creates a [D3.js](https://d3js.org/) force graph which not only looks and behaves attractive but also naturally creates a dense blob of bubbles and somewhat optimizes the used space of the screen.
 A database table holds the entries for this selection and allows other components to propose modules or highlight them. This standalone plugin could also be integrated in a more extensive addon for learndash.
 
 This feature has been tackled first to get a feel on how to implement such a plugin, to eyeball the effort needed and if we will be able to implement the prototype to wordpress/learndash. No member of the team had any real wordpress knowledge whatsoever and thus an implementation in wordpress/learndash has been considered to be infeasible. Nevertheless the interest check has been implemented as a wordpress plugin and can serve as a reference for future plugins or simply salavage the js code.
